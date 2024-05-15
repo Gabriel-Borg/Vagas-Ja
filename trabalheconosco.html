@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Mapa de Estacionamentos</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/styletc.css">
+</head>
+<body>
+    
+<nav>
+  <a href="index.html">
+    <p class="brand">
+      <img src="image/logo_vagas.png" alt="Logo"/>
+    </p>
+  </a>
+
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+
+    <ul class="menu-normal">
+        <li><a href="estacioneJa.html">Estacione Já</a></li>
+        <li><a href="trabalheconosco.html">Trabalhe Conosco</a></li>
+        <li><a href="#sobre">Sobre Nós</a></li>
+        <li>
+          <img src="image/usuario.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
+          <a href="#">Cadastro | Login</a>
+      </li>
+    </ul>
+</nav>
+
+<h1>Trabalhe Conosco</h1>
+
+<div class="content-wrapper">
+    <img src="image/principal 1.png" alt="principal1">
+    <div class="text-wrapper">
+        <p>Junte-se a nós para transformar a forma como as pessoas estacionam nas cidades! Estamos construindo uma rede digital de estacionamentos
+            fora da rua para otimizar espaços e facilitar o acesso ao estacionamento, buscando colaboradores motivados e criativos que desejam 
+            integrar seus estacionamentos ao nosso aplicativo.</p>
+        <button class="Aumente-seus-clientes-btn">Aumente seus clientes!</button>
+    </div>
+</div>
+
+<div class="content-wrapper2">
+    <div class="text-wrapper2">
+        <p>Candidate-se agora e ajude-nos a construir um futuro mais inteligente e conectado para todos! Preencha o formulário abaixo com suas 
+        informações. Estamos ansiosos para receber sua candidatura e descobrir como podemos trabalhar juntos para melhorar a forma como as pessoas
+        se deslocam e estacionam nas cidades.</p>
+    </div>
+    <img src="image/principal 2.png" alt="principal2">
+</div>
+<div class="estrada">
+    <img src="image/Menu-Fixo.png" alt="principal3">
+  <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
+    <h1 class="text-3xl font-bold mb-0 text-center">Informações Pessoais</h1>
+    <div class="yellow-line"></div>
+    <form>
+      <div class="grid grid-cols-2 gap-4 mb-4">
+        <div>
+          <label for="fullName" class="block text-zinc-700">Nome Completo</label>
+          <input
+            type="text"
+            id="fullName"
+            placeholder="Digite seu Nome Completo"
+            class="mt-1 p-2 w-full border rounded"
+          />
+        </div>
+        <div>
+          <label for="email" class="block text-zinc-700">E-mail</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Digite seu E-mail"
+            class="mt-1 p-2 w-full border rounded"
+          />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-4 mb-4">
+        <div>
+          <label for="cellphone" class="block text-zinc-700">Celular</label>
+          <input
+            type="tel"
+            id="cellphone"
+            placeholder="(xx) xxxxx-xxxx"
+            class="mt-1 p-2 w-full border rounded"
+          />
+        </div>
+        <div>
+          <label for="parkingName" class="block text-zinc-700">Nome do Estacionamento</label>
+          <input
+            type="text"
+            id="parkingName"
+            placeholder="Digite o Nome do Estacionamento"
+            class="mt-1 p-2 w-full border rounded"
+          />
+        </div>
+        <div>
+          <label for="parkingAddress" class="block text-zinc-700">Endereço Estacionamento</label>
+          <input
+            type="text"
+            id="parkingAddress"
+            placeholder="Digite seu Endereço"
+            class="mt-1 p-2 w-full border rounded"
+          />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-4 mb-4">
+        <div>
+          <label for="zipCode" class="block text-zinc-700">CEP</label>
+          <input
+            type="text"
+            id="zipCode"
+            placeholder="Digite seu CEP"
+            class="mt-1 p-2 w-full border rounded"
+          />
+        </div>
+        <div>
+          <label for="number" class="block text-zinc-700">Número</label>
+          <input
+            type="text"
+            id="number"
+            placeholder="Digite seu Número"
+            class="mt-1 p-2 w-full border rounded"
+          />
+        </div>
+        <div>
+          <label for="complement" class="block text-zinc-700">Complemento</label>
+          <input
+            type="text"
+            id="complement"
+            placeholder="Digite seu Complemento"
+            class="mt-1 p-2 w-full border rounded"
+          />
+        </div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-4 mb-4">
+        <div>
+          <label for="parkingScale" class="block text-zinc-700">Escala do Estacionamento</label>
+          <input
+            type="text"
+            id="parkingScale"
+            placeholder="342X90"
+            class="mt-1 p-2 w-full border rounded"
+          />
+        </div>
+        <div>
+          <label for="parkingSlots" class="block text-zinc-700">Quant. Vagas</label>
+          <select id="parkingSlots" class="mt-1 p-2 w-full border rounded">
+            <option>Quant. Vagas</option>
+          </select>
+        </div>
+        <div>
+          <label for="open24Hours" class="block text-zinc-700">24 Horas</label>
+          <select id="open24Hours" class="mt-1 p-2 w-full border rounded">
+            <option>Selecione Sim ou Não</option>
+            <option>Sim</option>
+            <option>Não</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="mb-6">
+        <label for="file" class="block text-sm font-medium text-zinc-700"
+          >Arraste e Solte o seu Arquivo</label
+        >
+        <div
+          class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-zinc-300 border-dashed rounded-md"
+        >
+          <div class="space-y-1 text-center">
+              <img src="image/clipe-de-anexo 2.png" alt="clipe">
+              <path
+                d="M28 8H12a4 4 0 00-4 4v24a4 4 0 004 4h24a4 4 0 004-4V20l-12-12z"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+              <path
+                d="M24 24v16m0-16l-8 8m8-8l8 8m-8-8V8h12v12"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+            <div class="flex text-sm text-zinc-600">
+              <label
+                for="file-upload"
+                class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
+              >
+                <span>Upload a file</span>
+                <input id="file-upload" name="file-upload" type="file" class="sr-only" />
+              </label>
+              <p class="pl-1">or drag and drop</p>
+            </div>
+            <p class="text-xs text-zinc-500">Arraste e Solte o seu Arquivo</p>
+          </div>
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="w-full bg-yellow-500 hover:bg-yellow-600 text-white font-bold py-2 px-4 rounded-md">
+        Enviar
+      </button>
+    </form>
+  </div>
+</div>
+<div>
+    <h1>    </h1>
+</div>
+
+<div>
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h9>Sobre</h9>
+            <ul>
+                <li>Nossa História</li>
+                <li>Minha Conta</li>
+                <li>Parceiros</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h9>Dúvidas e Termos</h9>
+            <ul>
+                <li>Políticas de Pagamentos</li>
+                <li>Políticas de Privacidade</li>
+                <li>Termo de uso</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h9>Central de Atendimento</h9>
+            <ul class="contact-info">
+                <li>
+                    <img src="image/zap.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
+                    <span>+55 (11) 91234-56789</span>
+                </li>
+                <li>
+                    <img src="image/o-email.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
+                    <span>atendimento.contato@vagasja.com.br</span>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h9>Redes Sociais</h9>
+            <!-- Adicione os ícones das redes sociais aqui -->
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Todos direitos reservados para VagasJá 2024.</p>
+    </div>
+</footer>
+<script src="js/script.js"></script>
+</body>
+</html>
