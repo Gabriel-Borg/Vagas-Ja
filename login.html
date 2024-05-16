@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Login - Vagas Já</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+    <link rel="icon" href="image/casa.png" type="image/png">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/stylecl.css">
+</head>
+<body>
+<nav>
+    <a href="index.html">
+        <p class="brand">
+          <img src="image/logo_vagas.png" alt="Logo"/>
+        </p>
+    </a>
+    <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+    <ul class="menu-normal">
+        <li><a href="estacioneJa.html">Estacione Já</a></li>
+        <li><a href="trabalheconosco.html">Trabalhe Conosco</a></li>
+        <li><a href="sobrenos.html">Sobre Nós</a></li>
+        <li>
+          <img src="image/usuario.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
+          <a href="cadastro.html">Cadastro | Login</a>
+      </li>
+    </ul>
+</nav>  
+<div class="overlay">
+    <div class="main-content">
+        <div class="form-container">
+            <h1>Login</h1>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" required>
+                
+                <button type="submit">Login</button>
+            </form>
+            <p>Não tem uma conta? <a href="cadastro.html">Cadastre-se</a></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
