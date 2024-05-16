@@ -307,7 +307,7 @@ h6{
 .map-img5 {
     width: 450px; 
     height: 420px; 
-    margin-left: 1200px; 
+    margin-left: 1300px; 
     margin-top: 50px; 
     padding-top: 20px;     
 }
@@ -480,8 +480,8 @@ h6{
     background-color: #FFDF56; 
 }
 
-.map-img20{
-    width: 2000px;
+.map-img20 {
+    width: 100%;
     height: auto;
 }
 

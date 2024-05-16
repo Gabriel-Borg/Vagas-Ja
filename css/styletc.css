@@ -58,7 +58,7 @@ img {
 
 h1 {
     font-size: 30px;
-    color: #bfbfbf;
+    color: #ffffff;
     margin-left: 50px;
     margin-top: 3%;
     font-family: "Lexend Exa", sans-serif;
@@ -456,70 +456,84 @@ button[type="submit"] {
     margin-top: -55px;
   }
 
-.footer {
-  background-color: #1A1A1A; /* Cor de fundo do footer */
-  color: #fff; 
-  text-align: center; /* Centralizar o texto do footer */
-  background: #1A1A1A;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #1A1A1A
-}
-
-.footer-column {
-    width: 25%;
-    padding-top: 15px; 
-    text-align: left; /* Alinhar o texto à esquerda */
-    margin-left: -11%
-}
-
-.footer-column h9 {
-    font-weight: bold;
-    font-size: 25px;
-    margin-bottom: 15px; /* Adicionei um margin-bottom para separar os títulos das listas */
-}
-
-.contact-info {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.contact-info li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px; /* Espaçamento entre os itens */
-}
-
-.contact-info li img {
-    margin-right: 10px;
-}a
-
-.footer-column ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.footer-column li {
-    margin-bottom: 10px;
-}
-
-.footer-column p {
+  .footer {
+    margin-top: -30px;
+    background-color: black; /* Cor de fundo do footer */
+    color: #fff; 
+    text-align: center; /* Centralizar o texto do footer */
+    background: black;
+  }
+  
+  .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: black;
+  }
+  
+  .footer-column {
+      width: 25%;
+      padding-top: 15px; 
+      text-align: left; /* Alinhar o texto à esquerda */
+      margin-left: -11%
+  }
+  
+  .footer-column h9 {
+      font-weight: bold;
+      font-size: 25px;
+      margin-bottom: 15px; /* Adicionei um margin-bottom para separar os títulos das listas */
+  }
+  
+  .contact-info {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+  
+  .contact-info li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px; /* Espaçamento entre os itens */
+  }
+  
+  .contact-info li img {
+      margin-right: 10px;
+  }
+  
+  .footer-column ul {
+      list-style-type: none;
+      padding: 0;
+  }
+  
+  .footer-column li {
+      margin-bottom: 10px;
+  }
+  
+  .footer-column p {
     margin: 0; /* Removi o margin-top para os parágrafos dentro das colunas */
     font-family: 'Arial', Helvetica, sans-serif;
-}
+  }
 
-.footer-bottom {
-    background-color: #FFDF56; 
-    text-align: center;
-    padding: 3px 0;
-    color: black;
-    margin-top: 2%;
+  .footer-bottom p {
+    color: black; /* ou qualquer cor que você deseja */
+    font-size: 14px; /* tamanho de fonte desejado */
+    font-family: 'Arial', sans-serif; /* ou qualquer outra família de fontes */
+    text-align: center; /* alinhamento desejado */
 }
-
+  
+  .footer-bottom .footer-text {
+    color: black; /* ou qualquer cor que você deseja */
+    font-size: 14px; /* tamanho de fonte desejado */
+    font-family: 'Arial', sans-serif; /* ou qualquer outra família de fontes */
+    text-align: center; /* alinhamento desejado */
+  }
+  
+  .footer-bottom {
+      background-color: #FFDF56; 
+      text-align: center;
+      padding: 3px 0;
+      color: black;
+      margin-top: 2%;
+  }
