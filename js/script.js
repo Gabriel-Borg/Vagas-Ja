@@ -1,15 +1,7 @@
 require('dotenv').config();
 
-async function getGoogleApiKey() {
+function getGoogleApiKey() {
     return process.env.GOOGLE_API_KEY;
-}
-
-async function loadGoogleMapsScript() {
-    const apiKey = await getGoogleApiKey();
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&amp;callback=initMap`;
-    script.async = true;
-    document.body.appendChild(script);
 }
 
 // Função para carregar o script do Google Maps dinamicamente
