@@ -1,11 +1,28 @@
-// Crie um elemento script
-var script = document.createElement('script');
+require('dotenv').config();
 
-// Defina o atributo src com a URL da API do Google Maps JavaScript
-script.src = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyAq89_1Oj4_zEVhPUtrWVq7kKoQjNJelkI&callback=initMap&libraries=places&loading=async';
+async function getGoogleApiKey() {
+    return process.env.GOOGLE_API_KEY;
+}
 
-// Adicione o elemento script ao corpo do documento
-document.body.appendChild(script);
+async function loadGoogleMapsScript() {
+    const apiKey = await getGoogleApiKey();
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&amp;callback=initMap`;
+    script.async = true;
+    document.body.appendChild(script);
+}
+
+// Função para carregar o script do Google Maps dinamicamente
+async function loadGoogleMapsScript() {
+    const apiKey = await getGoogleApiKey();
+    const script = document.createElement('script');
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+    script.async = true;
+    document.body.appendChild(script);
+}
+
+// Chamar a função para carregar o script
+loadGoogleMapsScript();
 
 var map;
 var markers = [];
@@ -13,15 +30,14 @@ var searchBox;
 var infowindow;
 var isMobile;
 
-
-function initMap() {
+// Função de inicialização do mapa, chamada pelo callback do Google Maps
+window.initMap = function() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: { lat: -23.55052, lng: -46.633308 }, // Centro de São Paulo
         zoom: 15,
         disableDefaultUI: true
     });
 
-    
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {
@@ -70,7 +86,7 @@ function initMap() {
 
     // Adicionar listener para buscar estacionamentos quando o botão for clicado
     document.getElementById('search').addEventListener('click', searchNearby);
-}
+};
 
 function searchNearby() {
     var location = map.getCenter(); // Usar o centro do mapa como local padrão
@@ -162,7 +178,7 @@ function showParkingInfo(place) {
             } else {
                 infoContent += 'Horário de Funcionamento: Informações não disponíveis<br>';
             }
-        } 
+        }
 
         infoContent += 'Quantidade de vagas: 50<br>';
         infoContent += 'Preço: R$ 5,00/hora<br>';
@@ -176,56 +192,17 @@ function showParkingInfo(place) {
     });
 }
 
-// // Função para exibir informações detalhadas do estacionamento
-// function showParkingInfo(place) {
-//     var infoContent = '<div style="max-width: 300px;">'; // Limitar largura para melhor visualização
+// Função para limpar marcadores
+function clearMarkers() {
+    for (var i = 0; i < markers.length; i++) {
+        markers[i].setMap(null);
+    }
+    markers = [];
 
-//     // Nome do estacionamento (se disponível)
-//     if (place.name) {
-//         infoContent += '<strong>' + place.name + '</strong><br>';
-//     }
+    // Esconda o elemento HTML
+    document.getElementById('parking-info').style.display = 'none';
+}
 
-//     // Endereço completo
-//     if (place.vicinity) {
-//         infoContent += 'Endereço: ' + place.vicinity + '<br>';
-//     }
-
-//     // Status de Abertura (se disponível)
-//     if (place.opening_hours && place.opening_hours.isOpen()) {
-//         infoContent += '<span style="color: green;">Aberto agora</span><br>';
-//     } else {
-//         infoContent += '<span style="color: red;">Fechado no momento</span><br>';
-//     }
-
-//     // Horário de Funcionamento (se disponível)
-//     if (place.opening_hours && place.opening_hours.periods && place.opening_hours.periods.length > 0) {
-//         infoContent += 'Horário de Funcionamento:<br>';
-//         place.opening_hours.periods.forEach(function (period) {
-//             var days = ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'];
-//             var openTime = period.open ? period.open.time : '00:00';
-//             var closeTime = period.close ? period.close.time : '00:00';
-//             infoContent += days[period.open.day] + ': ' + openTime + ' às ' + closeTime + '<br>';
-//         });
-//     }
-
-//     // Quantidade de vagas (exemplo: 50 vagas)
-//     infoContent += 'Quantidade de vagas: ' + (Math.floor(Math.random() * 100) + 1) + '<br>'; // Exemplo aleatório
-
-//     // Preço por hora (exemplo: R$ 5,00/hora)
-//     infoContent += 'Preço: R$ ' + (Math.random() * (10 - 3) + 3).toFixed(2) + '/hora<br>'; // Exemplo aleatório
-
-//     infoContent += '<button onclick="showMoreInfo()">Selecionar</button></div>';
-
-//     // Atualizar o conteúdo do elemento HTML com as informações do estacionamento
-//     document.getElementById('parking-info').innerHTML = infoContent;
-
-//     // Exibir o elemento HTML
-//     document.getElementById('parking-info').style.display = 'block';
-// }
-
-
-
-// Modifique a função clearMarkers para esconder o elemento HTML quando os marcadores são limpos
 // Exemplo de dados dos estacionamentos (substitua isso com seus próprios dados)
 const estacionamentos = [
     { nome: 'Estacionamento A', endereco: 'Rua A, 123', vagasDisponiveis: 10 },
@@ -254,20 +231,5 @@ function exibirEstacionamentos() {
     });
 }
 
-
 // Chamada da função para exibir os estacionamentos na inicialização
 exibirEstacionamentos();
-
-
-
-
-
-function clearMarkers() {
-    for (var i = 0; i < markers.length; i++) {
-        markers[i].setMap(null);
-    }
-    markers = [];
-
-    // Esconda o elemento HTML
-    document.getElementById('parking-info').style.display = 'none';
-}
