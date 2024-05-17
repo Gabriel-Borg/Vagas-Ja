@@ -176,8 +176,7 @@ function showParkingInfo(place) {
 
         infoContent += 'Quantidade de vagas: 50<br>';
         infoContent += 'Preço: R$ 5,00/hora<br>';
-        infoContent += '<button onclick="showMoreInfo()">Selecionar</button></div>';
-
+        infoContent += '<button onclick="window.location.href=\'selecionar.html\'">Selecionar</button></div>';
         // Atualize o conteúdo do elemento HTML com as informações do estacionamento
         document.getElementById('parking-info').innerHTML = infoContent;
 
