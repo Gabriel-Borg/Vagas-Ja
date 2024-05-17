@@ -1,19 +1,16 @@
-
 // Encontra a chave da API
-const apiKey = window.GOOGLE_API_KEY;
+const key = window.process.env.API_KEY;
 
 // Função para carregar o script do Google Maps dinamicamente
 async function loadGoogleMapsScript() {
     const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&callback=initMap`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${key}&libraries=places&callback=initMap`;
     script.async = true;
     document.body.appendChild(script);
 }
 
 // Chamar a função para carregar o script
-document.addEventListener('DOMContentLoaded', function() {
-    loadGoogleMapsScript();
-});
+window.addEventListener('load', loadGoogleMapsScript);
 
 var map;
 var markers = [];
@@ -42,8 +39,14 @@ window.initMap = function() {
 
     // Adicionar input de busca com autocomplete
     var input = document.getElementById('location-input');
-    searchBox = new google.maps.places.SearchBox(input);
-    map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+    if (google.maps.places) {
+        // Se google.maps.places estiver definido, é seguro acessar SearchBox
+        searchBox = new google.maps.places.SearchBox(input);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input);
+    } else {
+        // Se google.maps.places não estiver definido, faça algo para lidar com isso, como exibir uma mensagem de erro
+        console.error('google.maps.places is not defined');
+    }
 
     // Detectar se o usuário está em um dispositivo móvel
     isMobile = window.matchMedia("only screen and (max-width: 760px)").matches;
@@ -185,7 +188,8 @@ function showParkingInfo(place) {
 
 // Função para limpar marcadores
 function clearMarkers() {
-    for (var i = 0; i < markers.length; i++) {
+    for (var i = 0; i < markers
+.length; i++) {
         markers[i].setMap(null);
     }
     markers = [];

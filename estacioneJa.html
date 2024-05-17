@@ -11,10 +11,6 @@
     <title>Mapa de Estacionamentos</title>
 </head>
 <body>
-    <script>
-        window.GOOGLE_API_KEY = '<%= process.env.GOOGLE_API_KEY %>';
-    </script>
-    
 <nav>
     <div class="search-container">
         <input id="location-input" type="text" placeholder="Digite o ponto de busca...">
@@ -96,6 +92,15 @@
         <p>Todos direitos reservados para VagasJá 2024.</p>
     </div>
 </footer>
+<script>
+    // Defina manualmente o objeto window.process com as variáveis de ambiente desejadas
+    window.process = {
+      env: {
+        API_KEY: 'AIzaSyAq89_1Oj4_zEVhPUtrWVq7kKoQjNJelkI' 
+      }
+    };
+  </script>
+   
 <script src="js/script.js"></script>
 </body>
 </html>
