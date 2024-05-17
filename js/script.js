@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+// Encontra a chave da API
 function getGoogleApiKey() {
     return process.env.GOOGLE_API_KEY;
 }
