@@ -1,73 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Vagas Já</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0">
-    <link rel="icon" href="image/casa.png" type="image/png">
+    <link rel="shortcut icon" href="image/icon.png" type="image/png">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/styleh.css">
+    <title>Vagas Já</title>
 </head>
 <body>
-<nav>
-    <a href="index.html">
-        <p class="brand">
-          <img src="image/logo_vagas.png" alt="Logo"/>
-        </p>
-      </a>
+    <header>
+        <nav class ="navigation">
+            <img src="image/logo_vagas.png" alt="Logo"/>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="estacioneJa.html">Estacione Já</a></li>
+                <li class="nav-item"><a href="trabalheconosco.html">Trabalhe Conosco</a></li>
+                <li class="nav-item"><a href="sobrenos.html">Sobre Nós</a></li>
+                <li><img src="image/usuario.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
+                <a href="cadastro.html">Cadastro | Login</a></li>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
 
-    <div class="menu-icon" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-
-    <ul class="menu-normal">
-        <li><a href="estacioneJa.html">Estacione Já</a></li>
-        <li><a href="trabalheconosco.html">Trabalhe Conosco</a></li>
-        <li><a href="sobrenos.html">Sobre Nós</a></li>
-        <li>
-          <img src="image/usuario.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
-          <a href="cadastro.html">Cadastro | Login</a>
-      </li>
-    </ul>
-</nav>  
     <section class="container">
-        
-        <img src="img/garagem.png" alt="Imagem de fundo" class="garagem-img">
+        <img src="image/garagem.png" alt="Imagem de fundo" class="garagem-img">
     
-        <section class="square">
-            
-        </section>
-
         <section class="bloco">
-            <div class="escrever">
-                <p class="text1">Estacionamento próximo ao seu destino,</p> 
-                <p class="text2">agora ao alcance de um clique.</p>
-                <div class="bloco1">
-                    <div class="container">
-                        <section class="Anual">
-                            <button type="button" onclick="selectButton(this)">Estacione-Agora</button>
-                            <button type="button" onclick="selectButton(this)">Reserva</button>
-                            <button type="button" onclick="selectButton(this)">Mensal</button>
-                            <button type="button" onclick="selectButton(this)">Anual</button>
-                        </section>                        
+            <img src="image/garagem-mobile.png" alt="Imagem de fundo" class="garagem-mobile">
+    
+            <div class="bloco">
+                <div class="bloco-amarelo">
+                    <div class="escrita">
+                        <p class="text1">Estacionamento próximo ao seu destino,</p>
+                        <p class="text2">agora ao alcance de um clique.</p>
+                    </div>
                 </div>
-
-                <div class="search-box">
-                    <form action="#" method="get">
-                        <input type="text" placeholder="Pesquise o local ou endereço desejado" name="search">
-                        <br> <br><br><br><br><br><br><br><br><br><br>
-
-                        <div class="container">
-                        <button type="submit">Buscar</button>
-                  </div>
-
-                    </form>
+    
+                <div class="bloco-branco">
+                    <div class="container-bloco">
+                        <section class="opcao">
+                            <div class="button-menu">
+                                <button type="button" onclick="selectButton(this)">Agora</button>
+                                <button type="button" onclick="selectButton(this)">Reserva</button>
+                                <button type="button" onclick="selectButton(this)">Mensal</button>
+                                <button type="button" onclick="selectButton(this)">Anual</button>
+                            </div>
+                        </section>
+                    </div>
+    
+                    <div class="search-box">
+                        <form action="#" method="get">
+                            <input type="text" placeholder="Pesquise o local ou endereço desejado" name="search">
+                            <br><br><br><br><br><br><br><br><br><br><br>
+                            <div class="container">
+                                <button type="submit">Buscar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
     </section>
+    
     <section>
         <div class="content">
             <div class="quadrado">
@@ -88,9 +88,7 @@
     <div>    
         <section class="container">
             <img src="img/mulher.png" class="map-img5"> 
-            <div class="textao">
-                <h7>Enquanto as ruas da cidade estão repletas de carros estacionados, os espaços de estacionamento fora da rua permanecem subutilizados. Estamos construindo uma extensa rede digital de estacionamentos fora da via, otimizando espaços subutilizados e tornando o estacionamento mais conveniente e acessível para todos.</h7>
-            </div>
+            <h3 class="textao">Enquanto as ruas da cidade estão repletas de carros estacionados, os espaços de estacionamento fora da rua permanecem subutilizados. Estamos construindo uma extensa rede digital de estacionamentos fora da via, otimizando espaços subutilizados e tornando o estacionamento mais conveniente e acessível para todos.</h7>
         </section>
     </div>
     
@@ -116,6 +114,8 @@
     <div class="container"> <img src="img/linha.png" alt="Imagem de fundo" class="linha-img">
         <br><br>
 </div>
+
+<!-- PARTE FINAL PADRÃO -->
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-column">

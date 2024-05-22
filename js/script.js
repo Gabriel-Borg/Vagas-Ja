@@ -1,3 +1,16 @@
+// MENU TRANSIÇÃO
+const menu = document.querySelector('.menu');
+const NavMenu = document.querySelector('.nav-menu');
+
+menu.addEventListener('click', () => {
+    menu.classList.toggle('ativo');
+    NavMenu.classList.toggle('ativo');
+})
+
+function redirecionar() {
+    window.location.href = '#';
+}
+
 // Encontra a chave da API
 const key = window.process.env.API_KEY;
 

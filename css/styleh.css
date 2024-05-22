@@ -2,23 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,315;1,315&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap');
 
-
-body {
-    background-color: #1A1A1A;
-}
     
-.homem img {
-    
-width: 12px;
-height: 10px;
-margin-right: -22px;
-margin-left: 22px;
-padding-top: 1px;
-margin-top: 6px;
-color: #1a1a1a;
-	
-}
-
 body {
     background-color: #000000;
 }
@@ -29,7 +13,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 10px;
     background-color: #1A1A1A;
 }
 
@@ -38,18 +22,18 @@ nav ul {
     flex-direction: row;
 }
 
-nav ul.menu-normal {
+nav ul.nav-menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-nav ul.menu-normal li {
+nav ul.nav-menu li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
-nav ul.menu-normal li a:hover {
+nav ul.nav-menu li a:hover {
     color: white;
     border-bottom: 1px solid #FFDF56; 
     padding-bottom: 5px; /* Ajustando o espaçamento abaixo do texto */
@@ -70,12 +54,29 @@ nav ul li a {
 }
 
 img {
-    height: 55px;
+    height: 60px;
 }
 
-#logo{
-    height: 55px;
+.menu{
+    cursor: pointer;
+    display: none;
 }
+
+.menu .bar{
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    background: #FFDF56;
+    margin: 4px auto;
+    transition: all 0.3s;
+}
+
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: #FFDF56;
+}
+
 
 .container{
     display: inline-flex;
@@ -87,6 +88,46 @@ img {
     margin-top: -10px;
     font-size: 30;
 }   
+
+.container-bloco{
+    display: inline-flex;
+    flex-direction: column; /* Define a direção da flexbox como coluna */
+    align-items: center; /* Alinha os itens verticalmente */
+    width: 100%;
+    margin-top: -10px;
+    font-size: 30;
+}   
+
+.bloco-branco{
+    position: absolute;
+    top: 230px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 230px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+}
+
+.opcao button {    
+    display: inline-block; /* Coloca os botões um ao lado do outro */
+    margin-right: 20px; /* Aumenta o espaço entre os botões */
+    background-color: rgb(255, 255, 255); /* Remove o plano de fundo */
+    cursor: pointer; /* Cursor */
+    font-size: 16px; /* Tamanho da fonte */
+    padding: 10px 15px; /* Espaçamento interno */
+    border: 0px solid; /* Borda amarela */
+    border-radius: 6px; /* Arredonda a borda */
+    margin-top: 30px;
+    font-family: lato;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.opcao button:hover {
+    background-color: #FFDF56; 
+}
+
 
 h1{
     font-size: 20;
@@ -177,31 +218,19 @@ h2{
 .testimonial-image {
     margin-right: 29px; 
 }
- 
-.square {
-    position: absolute;
-    top: 72px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-    height: 500px;
-    background-color: rgba(255, 224, 86, 0.459); 
-    text-align: center;
-    color: #fff8f8;
-    margin: 0 auto; 
-    margin-top: -7px;
-}
 
-.bloco {
+/* BLOCO INICIAL - PESQUISA */
+
+.bloco-amarelo {
     position: absolute;
     top: 120px; 
     left: 50%;
     transform: translateX(-50%);
     width: 800px;
     height: 380px;
-    background-color: rgb(255, 224, 86); /* cor do quadrado com transparência */
+    background-color: #FFDF56; /* cor do quadrado com transparência */
     border-radius: 8px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* sombra na parte inferior direita */
+    box-shadow: 5px 5px 10px #1A1A1A; /* sombra na parte inferior direita */
 }
  
 .text1 {
@@ -221,12 +250,14 @@ h2{
     color: #000000;
 }
 
-
 .garagem-img{
     width: 100%;
     height: 500px;
 }
 
+.garagem-mobile{
+    display: none;
+}
 
 .h2 {
     margin: 0 auto; /* Define margens automáticas nos lados esquerdo e direito */
@@ -350,17 +381,6 @@ h6{
     padding-top: 0px; 
     line-height: 1.5; 
 }
-
-.h7{ 
-    padding-top: 10px;
-    color: #f0f0f0;
-    font-size: 30px;
-    height: 10px;
-    width: 1;
-    font-family: lato-regular;
-    text-align: left;
-        
-}
    
 .quadrado1 {
     font-size: 30px;
@@ -439,19 +459,6 @@ h6{
     background-color: #68665a; 
 }
 
-
-.bloco1 {
-    position: absolute;
-    top: 110px; 
-    left: 50%;
-    transform: translateX(-50%);
-    width: 700px;
-    height: 230px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 8px;
-           
-}
-
 .linha-img{
 
     height: 2px;
@@ -461,25 +468,6 @@ h6{
 
 }
  
-.Anual button {    
-    display: inline-block; /* Coloca os botões um ao lado do outro */
-    margin-right: 20px; /* Aumenta o espaço entre os botões */
-    background-color: rgb(255, 255, 255); /* Remove o plano de fundo */
-    cursor: pointer; /* Cursor */
-    font-size: 16px; /* Tamanho da fonte */
-    padding: 10px 15px; /* Espaçamento interno */
-    border: 0px solid; /* Borda amarela */
-    border-radius: 6px; /* Arredonda a borda */
-    margin-top: 30px;
-    font-family: lato;
-    font-weight: bold;
-    font-size: 20px;
-}
-
-.Anual button:hover {
-    background-color: #FFDF56; 
-}
-
 .map-img20 {
     width: 100%;
     height: auto;
@@ -558,4 +546,88 @@ h6{
       padding: 3px 0;
       color: black;
       margin-top: 2%;
+  }
+
+
+  /* RESPONSIVO TELAS A AJUSTAR */
+
+  @media  (max-width:845px) {
+    /* MENU RESPONSIVO */
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 70px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: #1A1A1A;
+        gap: -10px;
+        transition: 0.3s;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin-top: 40px;
+        margin-bottom: -50px;
+    }
+
+    .garagem-img{
+        display: none;
+    }
+
+    .garagem-mobile{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .bloco-amarelo{
+        display: none;
+    }
+
+    .bloco-branco{
+        position: center;
+        top: 20%; 
+        width: 80%;
+        height: 40%;
+        background-color: rgb(255, 255, 255);
+        border-radius: 15px;
+    }
+
+    .container-bloco{
+        display: inline-flex;
+        flex-direction: column; /* Define a direção da flexbox como coluna */
+        align-items: center; /* Alinha os itens verticalmente */
+        width: 100%;
+        font-size: 30px;
+    }   
+
+    .button-menu button {    
+        display: inline-block; /* Coloca os botões um ao lado do outro */
+        margin-right: 8px; /* Aumenta o espaço entre os botões */
+        padding: 8px 15px; /* Espaçamento interno */
+        border: 0px solid; /* Borda amarela */
+        border-radius: 20px; /* Arredonda a borda */
+        margin-top: 30px;
+        font-family: lato;
+    }
+
+    .button-menu button:hover {
+        background-color: #FFDF56; 
+    }
+
+
   }
