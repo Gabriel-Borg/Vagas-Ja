@@ -11,34 +11,24 @@
     <title>Mapa de Estacionamentos</title>
 </head>
 <body>
-<nav>
-    <div class="search-container">
-        <input id="location-input" type="text" placeholder="Digite o ponto de busca...">
-        <button id="search" class="search">Buscar</button>
-    </div>
-
-    <a href="index.html">
-        <p class="brand">
-          <img src="image/logo_vagas.png" alt="Logo"/>
-        </p>
-      </a>
-
-    <div class="menu-icon" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-
-    <ul class="menu-normal">
-        <li><a href="estacioneJa.html">Estacione Já</a></li>
-        <li><a href="trabalheconosco.html">Trabalhe Conosco</a></li>
-        <li><a href="sobrenos.html">Sobre Nós</a></li>
-        <li>
-          <img src="image/usuario.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
-          <a href="cadastro.html">Cadastro | Login</a>
-      </li>
-    </ul>
-</nav>
+    <body>
+        <header>
+            <nav class ="navigation">
+                <img src="image/logo_vagas.png" alt="Logo"/>
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="estacioneJa.html">Estacione Já</a></li>
+                    <li class="nav-item"><a href="trabalheconosco.html">Trabalhe Conosco</a></li>
+                    <li class="nav-item"><a href="sobrenos.html">Sobre Nós</a></li>
+                    <li><img src="image/usuario.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
+                    <a href="login.html">Cadastro | Login</a></li>
+                </ul>
+                <div class="menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </header>
 
 <div id="map"></div>
 

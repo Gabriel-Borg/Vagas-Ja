@@ -54,7 +54,7 @@ nav ul li a {
 }
 
 img {
-    height: 60px;
+    height: 70px;
 }
 
 .menu{
@@ -597,12 +597,12 @@ h6{
     }
 
     .bloco-branco{
-        position: center;
-        top: 16%; 
+        position: absolute;
+        top: 25%;
         width: 90%;
-        height: 28%;
-        background-color: rgb(255, 255, 255);
-        border-radius: 15px;
+        height: 49%;
+        background-color: transparent;
+        border-radius: 8px;
     }
 
     .container-bloco{
@@ -618,9 +618,9 @@ h6{
         padding: 8px 15px; /* Espaçamento interno */
         border: 0px solid; /* Borda amarela */
         border-radius: 20px; /* Arredonda a borda */
-        margin-top: 30px;
+        margin-top:  3%;
         font-family: lato;
-        font-size: 95%;
+        font-size: 100%;
     }
 
     .opcao button:hover {
@@ -632,4 +632,5 @@ h6{
     .search-box{
         width: 50%;
     }
+    
   }
