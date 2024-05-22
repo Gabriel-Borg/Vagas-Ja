@@ -420,7 +420,6 @@ h6{
     display: flex;
     justify-content: center; 
     padding: 10px;
-    border-radius: 6px;     
 }
         
 .search-box form {
@@ -433,7 +432,6 @@ h6{
 .search-box input[type="text"] {            
     padding: 8px;
     border: 2px solid #ccc;
-    border-radius: 5px;
     border-radius: 10px;
     width: 1500px; /* Defina a largura desejada */
     margin-left: 900px;
@@ -600,9 +598,9 @@ h6{
 
     .bloco-branco{
         position: center;
-        top: 20%; 
-        width: 80%;
-        height: 40%;
+        top: 16%; 
+        width: 90%;
+        height: 28%;
         background-color: rgb(255, 255, 255);
         border-radius: 15px;
     }
@@ -612,10 +610,9 @@ h6{
         flex-direction: column; /* Define a direção da flexbox como coluna */
         align-items: center; /* Alinha os itens verticalmente */
         width: 100%;
-        font-size: 30px;
     }   
 
-    .button-menu button {    
+    .opcao button {    
         display: inline-block; /* Coloca os botões um ao lado do outro */
         margin-right: 8px; /* Aumenta o espaço entre os botões */
         padding: 8px 15px; /* Espaçamento interno */
@@ -623,11 +620,16 @@ h6{
         border-radius: 20px; /* Arredonda a borda */
         margin-top: 30px;
         font-family: lato;
+        font-size: 95%;
     }
 
-    .button-menu button:hover {
+    .opcao button:hover {
         background-color: #FFDF56; 
     }
 
+    /* AJUSTAR O BOTÃO DE PESQUISA */
 
+    .search-box{
+        width: 50%;
+    }
   }
