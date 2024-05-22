@@ -1,9 +1,8 @@
-// Import the functions you need from the SDKs you need
+// firebase.js
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
-// Adicione mais importações conforme necessário
-// import { getStorage } from "firebase/storage"; // Para o Firebase Storage, por exemplo
+import { registerUser } from './firebase.js';
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { getFirestore, doc, setDoc } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -18,13 +17,39 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-
-// Initialize Firebase services
 const auth = getAuth(app);
 const db = getFirestore(app);
-// const storage = getStorage(app); // Para o Firebase Storage, se necessário
 
-// Export the services for use in other files
-export { auth, db };
+// Função para criar um novo usuário e salvar dados no Firestore
+async function registerUser(name, email, password) {
+  try {
+    // Cria o usuário com e-mail e senha no Firebase Authentication
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
 
+    // Salva os dados do usuário no Firestore
+    await setDoc(doc(db, "users", user.uid), {
+      name: name,
+      email: email
+    });
 
+    console.log("Usuário registrado com sucesso:", user);
+  } catch (error) {
+    console.error("Erro ao registrar usuário:", error);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.querySelector('form');
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const senha = document.getElementById('senha').value;
+
+      await registerUser(nome, email, senha);
+    });
+  });
+}
+
+export { registerUser };
