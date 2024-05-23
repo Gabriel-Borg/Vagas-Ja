@@ -1,0 +1,114 @@
+ /* RESPONSIVO TELAS A AJUSTAR */
+
+ @media  (max-width:750px) {
+    /* MENU RESPONSIVO */
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 64px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: #1A1A1A;
+        gap: -10px;
+        transition: 0.3s;
+        z-index: 10001;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin-top: 30px;
+        margin: 10px;
+        margin-bottom: -25px;
+    }
+
+    .garagem-img{
+        display: none;
+    }
+
+    .garagem-mobile{
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .bloco-amarelo{
+        display: none;
+    }
+
+    .bloco-branco{
+        position: absolute;
+        top: 25%;
+        width: 90%;
+        height: 49%;
+        background-color: transparent;
+        border-radius: 8px;
+    }
+
+    .container-bloco{
+        display: inline-flex;
+        flex-direction: column; /* Define a direção da flexbox como coluna */
+        align-items: center; /* Alinha os itens verticalmente */
+        width: 100%;
+    }   
+
+    .opcao button { 
+        display: inline-block; /* Coloca os botões um ao lado do outro */
+        margin-right: 8px; /* Aumenta o espaço entre os botões */
+        padding: 8px 15px; /* Espaçamento interno */
+        border: 0px solid; /* Borda amarela */
+        border-radius: 20px; /* Arredonda a borda */
+        font-family: lato;
+        font-size: 95%;
+    }
+
+    .opcao button:hover {
+        background-color: #FFDF56; 
+    }
+
+    /* AJUSTAR O BOTÃO DE PESQUISA */
+
+    .search-box{
+        width: 80%;
+    }
+
+     /* AJUSTAR O BOTÃO DE PESQUISA */
+
+     .textos h3 {        
+        font-size: 95%;
+        font-weight: bolder;
+        font-family: "Lexend Exa", sans-serif;
+        margin-top: 20px;
+        margin-left: 20px; /* Ajuste o espaçamento entre os elementos conforme necessário */
+    }
+
+    .image-car {
+        position: center;
+        width: 100%;
+        height: 50%;
+    }
+
+    .textao{
+        width: 100%;
+        margin-top: 30px;
+        margin-left: 1%;
+        font-size: 76%;
+    }
+    .map.img5 {
+
+    }
+  }

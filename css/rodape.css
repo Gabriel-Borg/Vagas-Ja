@@ -1,0 +1,83 @@
+
+.linha-separacao {
+    width: 80%; /* Ajuste a largura da linha conforme necessário */
+    margin: 20px auto; /* Centraliza a linha horizontalmente e adiciona espaço vertical */
+    border: 0; /* Remove qualquer borda padrão */
+    height: 5px; /* Define a altura da linha */
+    background-color: #FFDF56; /* Define a cor da linha */
+}
+
+.footer {
+    font-weight: bolder;
+    margin-top: 30px; /* Ajustei para um valor positivo para alinhar melhor o footer */
+    background-color: black; /* Cor de fundo do footer */
+    color: #fff;
+    text-align: center; /* Centralizar o texto do footer */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px; /* Adicionei um padding para separar o conteúdo do footer das bordas */
+}
+
+.footer-column {
+    width: 25%;
+    text-align: left; /* Alinhar o texto à esquerda */
+    padding: 0 20px; /* Adicionei um padding para espaçamento interno */
+}
+
+.footer-column h1 {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 15px; /* Adicionei um margin-bottom para separar os títulos das listas */
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Espaçamento entre os itens */
+}
+
+.contact-info li img {
+    margin-right: 10px;
+}
+
+.contact-info li span {
+    font-weight: normal; /* Removendo o negrito dos textos das informações de contato */
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: normal; /* Removendo o negrito dos textos das listas */
+}
+
+.footer-column p {
+    margin: 0; /* Removi o margin-top para os parágrafos dentro das colunas */
+    font-family: 'Arial', Helvetica, sans-serif;
+}
+
+
+.footer-end p{
+    font-weight: normal; /* Removendo o negrito dos textos das listas */
+    background-color: #FFDF56;
+    text-align: center;
+    padding: 10px 0; 
+    color: black;
+    margin-top: 20px; /* Ajustei o margin-top para um valor maior */
+}

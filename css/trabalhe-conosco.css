@@ -1,0 +1,546 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,315;1,315&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap');
+
+body {
+    background-color: #000000;
+}
+
+nav {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #1A1A1A;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul.menu-normal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul.menu-normal li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul.menu-normal li a:hover {
+    color: white;
+    border-bottom: 1px solid #FFDF56; 
+    padding-bottom: 5px; /* Ajustando o espaçamento abaixo do texto */
+    margin-bottom: 5px; /* Ajustando o espaçamento abaixo da linha */
+}
+
+nav ul li {
+    color: #FFDF56;
+    list-style: none;
+    padding: 40px;
+    cursor: pointer;
+    font-family:  'Josefin Sans', sans-serif;
+}
+
+nav ul li a {
+    color: var(--yellow);
+    text-decoration: none;
+}
+
+img {
+    height: 55px;
+}
+
+h1 {
+    font-size: 30px;
+    color: #ffffff;
+    margin-left: 50px;
+    margin-top: 3%;
+    font-family: "Lexend Exa", sans-serif;
+    font-weight:bold;
+}
+
+h2{
+  font-size: 20;
+  font-family: Lato;
+  margin: 0;
+  color: #f0f0f0;
+}   
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.content-wrapper img {
+    width: 40%;
+    height: auto;
+    margin-left: 25px;
+    margin-top: 30px;
+}
+
+.text-wrapper {
+    flex: 1;
+    padding: 0 25px;
+}
+
+.content-wrapper2 {
+    display: flex;
+    align-items: center;
+}
+
+.content-wrapper2 img {
+    width: 40%;
+    height: auto;
+    margin-right: 25px;
+    margin-top: 30px;
+}
+
+.text-wrapper2 {
+    flex: 1;
+    padding: 0 25px;
+}
+
+div p {
+    color: white;
+    font-size: 30px;
+    font-family:  'Josefin Sans', sans-serif;
+    text-align: center;
+}
+
+.Aumente-seus-clientes-btn {
+    background-color: #FFDF56;
+    color: #000000;
+    width: 40%;
+    border: none;
+    border-radius: 7px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0 auto;
+    margin-top: 3%;
+    display: block; 
+}
+
+.Aumente-seus-clientes-btnbtn:hover {
+    background-color: #FFC300;
+}
+/* Estilo para a nova seção */
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 50px; /* Ajuste o espaçamento entre as duas seções conforme necessário */
+}
+
+.text-wrapper {
+    flex: 1;
+    padding-right: 20px; /* Adiciona espaçamento entre o texto e a imagem */
+}
+
+.text-wrapper p {
+    color: white;
+    font-size: 40px;
+}
+
+/* Estilo para o botão "Saiba Mais" */
+.saiba-mais-btn {
+    background-color: #FFDF56;
+    color: #000000;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.saiba-mais-btn:hover {
+    background-color: #FFC300;
+}
+
+.estrada img {
+    margin-top: 40px;
+    width: 100%;
+    height: auto;
+}
+/* Estilos para o formulário */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.25rem;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+label {
+  color: #4b5563;
+  font-weight: 500;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background-color: #FFDF56;
+    color: black;
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 1rem;
+    border: 2px solid black; /* Adiciona uma borda preta de 2 pixels */
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 25px;
+    transition: background-color 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #b6b6b6;
+  }  
+
+/* Estilos para o container do formulário */
+.font-sans {
+  font-family: sans-serif;
+}
+
+.max-w-4xl {
+  width: 1000px;
+  height: 900px;
+  margin-top: 50px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bg-white {
+  background-color: #ffffff;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.text-3xl {
+  font-size: 40px;
+  color: #000000;
+  margin-top: -5px;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.mb-0 {
+    margin-bottom: 1.5rem;
+    color: #000000;
+    margin-top: 0px;
+  
+  }
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+  color: #000000;
+  margin-top: 10px;
+  font-size: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Estilos para os espaçamentos do formulário */
+.grid {
+  display: grid;
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 15px;
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 15px;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+/* Estilos para as cores do texto */
+.text-zinc-700 {
+  color: #4b5563;
+}
+
+/* Estilos para o input de arrastar e soltar arquivos */
+.border-dashed {
+  border-style: dashed;
+  margin-top: 10px;
+}
+
+.clipe-de-anexo2{
+    width: 10px;
+    height: 10px;
+}
+.flex {
+  display: flex;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+/* Estilos para o ícone de arquivo */
+.text-zinc-500 {
+  color: #6b7280;
+}
+
+
+/* Estilos para o botão de enviar */
+.bg-yellow-500 {
+  background-color: #f59e0b;
+}
+
+.hover\:bg-yellow-600:hover {
+  background-color: #ed8936;
+}
+
+.yellow-line {
+    width: 750px;
+    height: 3px;
+    background-color: #FFDF56; 
+    margin: 20px 0; /* Espaçamento acima e abaixo da linha */
+    margin-top: 3%;
+    margin-left: 100px;
+}
+/* Estilos para o botão de upload de arquivo */
+#file-upload {
+    display: none;
+  }
+  
+  label[for="file-upload"] {
+    cursor: pointer;
+  }
+  
+  /* Estilos para o container do botão de upload */
+  .border-dashed {
+    border-style: dashed;
+  }
+  
+  .flex {
+    display: flex;
+  }
+  
+  .justify-center {
+    justify-content: center;
+  }
+  
+  .px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+  
+  .pt-5 {
+    padding-top: 1.25rem;
+  }
+  
+  .pb-6 {
+    padding-bottom: 1.5rem;
+  }
+  
+  .border-2 {
+    border-width: 2px;
+  }
+  
+  .border-zinc-300 {
+    border-color: #d1d5db;
+  }
+  
+  .rounded-md {
+    border-radius: 0.375rem;
+  }
+  
+  .space-y-1 {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .text-sm {
+    font-size: 0.875rem;
+  }
+  
+  .text-zinc-400 {
+    color: #9ca3af;
+  }
+  
+  .text-zinc-600 {
+    color: #6b7280;
+  }
+  
+  .text-zinc-500 {
+    color: #9ca3af;
+  }
+  
+  /* Estilos para o ícone de upload */
+  .h-12 {
+    height: 3rem;
+  }
+  
+  .w-12 {
+    width: 3rem;
+  }
+  
+  /* Estilos para o botão de enviar */
+  .bg-yellow-500 {
+    background-color: #f59e0b;
+  }
+  
+  .hover\:bg-yellow-600:hover {
+    background-color: #ed8936;
+  }
+  
+  .text-white {
+    color: #ffffff;
+  }
+  
+  .font-bold {
+    font-weight: 700;
+  }
+  
+  .py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .rounded-md {
+    border-radius: 0.375rem;
+  }
+  
+  .space-y-1 img {
+    width: 70px;
+    height: 70px;
+    margin-top: 50px;
+  }
+  
+  .relative{
+    margin-left: 223px;
+    margin-top: 20px;
+  }
+  
+  .text-xs{
+    margin-top: -55px;
+  }
+
+  .footer {
+    margin-top: -30px;
+    background-color: black; /* Cor de fundo do footer */
+    color: #fff; 
+    text-align: center; /* Centralizar o texto do footer */
+    background: black;
+  }
+  
+  .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      background-color: black;
+  }
+  
+  .footer-column {
+      width: 25%;
+      padding-top: 15px; 
+      text-align: left; /* Alinhar o texto à esquerda */
+      margin-left: -11%
+  }
+  
+  .footer-column h9 {
+      font-weight: bold;
+      font-size: 25px;
+      margin-bottom: 15px; /* Adicionei um margin-bottom para separar os títulos das listas */
+  }
+  
+  .contact-info {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+  }
+  
+  .contact-info li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px; /* Espaçamento entre os itens */
+  }
+  
+  .contact-info li img {
+      margin-right: 10px;
+  }
+  
+  .footer-column ul {
+      list-style-type: none;
+      padding: 0;
+  }
+  
+  .footer-column li {
+      margin-bottom: 10px;
+  }
+  
+  .footer-column p {
+    margin: 0; /* Removi o margin-top para os parágrafos dentro das colunas */
+    font-family: 'Arial', Helvetica, sans-serif;
+  }
+
+  .footer-bottom p {
+    color: black; /* ou qualquer cor que você deseja */
+    font-size: 14px; /* tamanho de fonte desejado */
+    font-family: 'Arial', sans-serif; /* ou qualquer outra família de fontes */
+    text-align: center; /* alinhamento desejado */
+}
+  
+  .footer-bottom .footer-text {
+    color: black; /* ou qualquer cor que você deseja */
+    font-size: 14px; /* tamanho de fonte desejado */
+    font-family: 'Arial', sans-serif; /* ou qualquer outra família de fontes */
+    text-align: center; /* alinhamento desejado */
+  }
+  
+  .footer-bottom {
+      background-color: #FFDF56; 
+      text-align: center;
+      padding: 3px 0;
+      color: black;
+      margin-top: 2%;
+  }

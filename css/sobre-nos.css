@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,315;1,315&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap');
+
+body {
+    background-color: #000000;
+    background: #000000;
+}
+
+nav {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background-color: #1A1A1A;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul.menu-normal {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul.menu-normal li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul.menu-normal li a:hover {
+    color: white;
+    border-bottom: 1px solid #FFDF56; 
+    padding-bottom: 5px; /* Ajustando o espaçamento abaixo do texto */
+    margin-bottom: 5px; /* Ajustando o espaçamento abaixo da linha */
+}
+
+nav ul li {
+    color: #FFDF56;
+    list-style: none;
+    padding: 40px;
+    cursor: pointer;
+    font-family:  'Josefin Sans', sans-serif;
+}
+
+nav ul li a {
+    color: var(--yellow);
+    text-decoration: none;
+}
+
+
+
+
+
+img {
+    height: 55px;
+    
+}
+
+h1 {
+    text-align: left;
+    font-size: 30px;
+    color: white;
+    margin-left: 50px;
+    margin-top: 3%;
+    font-family: "Lexend Exa", sans-serif;
+    font-weight:bold;
+}
+
+h2 {
+
+     
+        text-align: center;
+        font-size: 30px;
+        color: #ffffff;
+      
+        margin-top: 3%;
+        font-family: "Lexend Exa", sans-serif;
+        font-weight:bold;
+    
+
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.content-wrapper img {
+    width: 40%;
+    height: auto;
+    margin-left: 25px;
+    margin-top: 30px;
+}
+
+.text-wrapper {
+    flex: 1;
+    padding: 0 25px;
+}
+
+.content-wrapper2 {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.text-wrapper2 {
+    flex: 1;
+    padding: 0 25px;
+    margin-left: 40px;
+    margin-top: 10px;
+}
+
+div p {
+  color: white;
+  font-size: 35px;
+  font-family: 'Josefin Sans', sans-serif;
+  margin-top: -10px;
+  text-align: left;
+}
+
+/* Estilo para a nova seção */
+.content-wrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 50px; /* Ajuste o espaçamento entre as duas seções conforme necessário */
+}
+
+.text-wrapper {
+    flex: 1;
+    padding-right: 20px; /* Adiciona espaçamento entre o texto e a imagem */
+    margin-left: 40px;
+    
+}
+
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+    gap: 20px; /* Espaçamento entre as imagens */
+}
+
+.image-item {
+    text-align: center;
+    
+   
+    margin: 0 auto; /* Alinha o contêiner no centro */
+}
+
+.image-item a {
+    text-decoration: none; /* Remove sublinhado */
+    color: inherit; /* Mantém a cor do texto */
+}
+
+.image-item img {
+    width: 100px; /* Define a largura da imagem */
+    height: 90px; /* Define a altura da imagem */
+    border-radius: 50%; /* Faz a imagem circular */
+}
+
+.rapaziada {
+    display: flex;
+    justify-content: center;
+}
+
+.rapaziada img {
+    width: 1125px;
+    height: 595px;
+}
+.rapaziada {
+    width: 1350px; 
+    max-width: 1500px; 
+    margin-left: auto; 
+    margin-right: auto; 
+    padding-left: center; 
+    padding-top: 40px; 
+    margin-left: 400px;
+  }
+
+
+.estrada img {
+    margin-top: 40px;
+    width: 100%;
+    height: auto;
+    
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 15px;
+}
+
+.grid-cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 15px;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+
+.yellow-line {
+    width: 750px;
+    height: 3px;
+    background-color: #FFDF56; 
+    margin: 20px 0; /* Espaçamento acima e abaixo da linha */
+    margin-top: 3%;
+    margin-left: 100px;
+}
+
+  .yellow-line {
+    height: 2px;
+    background-color: #FFDF56; 
+    margin: 20px 0; /* Espaçamento acima e abaixo da linha */
+    margin-top: 7%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1100px;
+}
+.footer {
+  margin-top: -30px;
+  background-color: black; /* Cor de fundo do footer */
+  color: #fff; 
+  text-align: center; /* Centralizar o texto do footer */
+  background: black;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: black;
+}
+
+.footer-column {
+    width: 25%;
+    padding-top: 15px; 
+    text-align: left; /* Alinhar o texto à esquerda */
+    margin-left: -11%
+}
+
+.footer-column h9 {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 15px; /* Adicionei um margin-bottom para separar os títulos das listas */
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Espaçamento entre os itens */
+}
+
+.contact-info li img {
+    margin-right: 10px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+}
+
+.footer-column p {
+  margin: 0; /* Removi o margin-top para os parágrafos dentro das colunas */
+  font-family: 'Arial', Helvetica, sans-serif;
+}
+
+.footer-bottom .footer-text {
+  color: black; /* ou qualquer cor que você deseja */
+  font-size: 14px; /* tamanho de fonte desejado */
+  font-family: 'Arial', sans-serif; /* ou qualquer outra família de fontes */
+  text-align: center; /* alinhamento desejado */
+}
+
+.footer-bottom {
+    background-color: #FFDF56; 
+    text-align: center;
+    padding: 3px 0;
+    color: black;
+    margin-top: 2%;
+}

@@ -135,13 +135,12 @@ img {
     height: 55px;
 }
 
-h1 {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: 40px;
-    color: #bfbfbf;
-    text-align: center;
-    margin-top: 20px;
-}
+h1{
+    font-size: 20;
+    font-family: Lato;
+    margin: 0;
+    color: #f0f0f0;
+} 
 
 #estacionamentos-proximos {
     padding: 20px;
@@ -169,79 +168,6 @@ h1 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.footer {
-    background-color: #1A1A1A; /* Cor de fundo do footer */
-    color: #fff; 
-    text-align: center; /* Centralizar o texto do footer */
-    background: #1A1A1A;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: #1A1A1A
-}
-
-.footer-column {
-    width: 25%;
-    padding-top: 15px; 
-    text-align: left; /* Alinhar o texto à esquerda */
-    margin-left: -11%
-}
-
-.footer-column h9 {
-    font-weight: bold;
-    font-size: 25px;
-    margin-bottom: 15px; /* Adicionei um margin-bottom para separar os títulos das listas */
-}
-
-.contact-info {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.contact-info li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px; /* Espaçamento entre os itens */
-}
-
-.contact-info li img {
-    margin-right: 10px;
-}a
-
-.footer-column ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.footer-column li {
-    margin-bottom: 10px;
-}
-
-.footer-column p {
-    margin: 0; /* Removi o margin-top para os parágrafos dentro das colunas */
-    font-family: 'Arial', Helvetica, sans-serif;
-}
-
-.footer-bottom {
-    background-color: #FFDF56; 
-    text-align: center;
-    padding: 5px 0;
-    color: #000000;
-    margin-top: 2%;
-}
-
-.yellow-line {
-    height: 2px;
-    background-color: #FFDF56; 
-    margin: 20px 0; /* Espaçamento acima e abaixo da linha */
-    margin-top: 3%;
-}
 
 .selecionar-btn {
     display: block; /* Tornar o botão um elemento de bloco */

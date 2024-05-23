@@ -7,7 +7,10 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="css/styleh.css">
+    <link rel="stylesheet" href="css/desktop-index.css">
+    <link rel="stylesheet" href="css/mobile-index.css">
+    <link rel="stylesheet" href="css/rodape.css">
+
     <title>Vagas Já</title>
 </head>
 <body>
@@ -29,7 +32,7 @@
         </nav>
     </header>
 
-    <section class="container">
+    <section class="container-header">
         <img src="image/garagem.png" alt="Imagem de fundo" class="garagem-img">
     
         <section class="bloco">
@@ -43,7 +46,7 @@
                     </div>
                 </div>
     
-                <div class="bloco-branco">
+                <!-- <div class="bloco-branco">
                     <div class="container-bloco">
                         <section class="opcao">
                             <div class="button-menu">
@@ -53,9 +56,9 @@
                                 <button type="button" class="btn" onclick="selectButton(this)">Anual</button>
                             </div>
                         </section>
-                    </div>
+                    </div> -->
 
-                    <div class="search-box">
+                    <!-- <div class="search-box">
                         <form action="#" method="get">
                             <input type="text" placeholder="Pesquise o local ou endereço desejado" name="search">
                             <br><br><br><br><br><br><br><br><br><br><br>
@@ -63,8 +66,7 @@
                                 <button type="submit">Buscar</button>
                             </div>
                         </form>
-                    </div>
-
+                    </div> -->
                 </div>
             </div>
         </section>
@@ -82,46 +84,46 @@
             </div>
         </div>
     </section>
-    
+ 
     <div class="infos">
         <img src="image/infos.png" class="map-img20">
     </div>
-    
-    <div>    
-        <section class="container">
-            <!-- <img src="img/mulher.png" class="map-img5">  -->
-            <h3 class="textao">Enquanto as ruas da cidade estão repletas de carros estacionados, os espaços de estacionamento fora da rua permanecem subutilizados. Estamos construindo uma extensa rede digital de estacionamentos fora da via, otimizando espaços subutilizados e tornando o estacionamento mais conveniente e acessível para todos.</h7>
-        </section>
-    </div>
-    
-    <div class="container">
-        <button class="saiba-mais-btn">Saiba Mais</button>
-    </div>
-    
 
-    <div class="quadrado1">
-        <h10><span class="amarelo">Nossos clientes </span>refletem a qualidade do serviço:</h10>
+    <section class="container-texto">
+        <h4>Estamos construindo uma extensa rede digital de estacionamentos fora da via, otimizando espaços subutilizados e tornando o estacionamento mais conveniente e acessível para todos.</h4>
+        <img src="image/img-mulher.png" class="map-img5"> 
+    </section>
+    
+    <div class="container-btn">
+        <a href="trabalheconosco.html" class="saiba-mais-btn">Saiba Mais</a>
     </div>
-    <div>
+    
+    <div class="quadrado-texto">
+        <h5><span class="amarelo">Nossos clientes </span>refletem a qualidade do serviço:</h5>
         <img src="image/estrelinha.png" class="avaliacao" alt="ava">
     </div>
 
-    <section class="grid-container">
-        <div class="item"><img src="img/cliente1.png" class="map-img9"></div>
-        <div class="item"><img src="img/cliente2.png" class="map-img10"></div>
-        <div class="item"><img src="img/cliente3.png" class="map-img11"></div>
-       
+
+
+    <section class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-item"><img src="image/avaliacao-1.png" class="carousel-img"></div>
+            <div class="carousel-item"><img src="image/avaliacao-2.png" class="carousel-img"></div>
+            <div class="carousel-item"><img src="image/avaliacao-3.png" class="carousel-img"></div>
+            <div class="carousel-item"><img src="image/avaliacao-4.png" class="carousel-img"></div>
+            <div class="carousel-item"><img src="image/avaliacao-5.png" class="carousel-img"></div>
+            <div class="carousel-item"><img src="image/avaliacao-6.png" class="carousel-img"></div>
+        </div>
     </section>
 
-    <div class="container"> <img src="img/linha.png" alt="Imagem de fundo" class="linha-img">
-        <br><br>
-</div>
-
 <!-- PARTE FINAL PADRÃO -->
+
+<hr class="linha-separacao">
+
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-column">
-            <h9>Sobre</h9>
+            <h1>Sobre</h1>
             <ul>
                 <li>Nossa História</li>
                 <li>Minha Conta</li>
@@ -129,7 +131,7 @@
             </ul>
         </div>
         <div class="footer-column">
-            <h9>Dúvidas e Termos</h9>
+            <h1>Dúvidas e Termos</h1>
             <ul>
                 <li>Políticas de Pagamentos</li>
                 <li>Políticas de Privacidade</li>
@@ -137,29 +139,36 @@
             </ul>
         </div>
         <div class="footer-column">
-            <h9>Central de Atendimento</h9>
+            <h1>Central de Atendimento</h1>
             <ul class="contact-info">
                 <li>
-                    <img src="image/zap.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
+                    <img src="image/whatsapp.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
                     <span>+55 (11) 91234-56789</span>
                 </li>
                 <li>
-                    <img src="image/o-email.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
+                    <img src="image/e-mail.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
                     <span>atendimento.contato@vagasja.com.br</span>
                 </li>
             </ul>
         </div>
         <div class="footer-column">
-            <h9>Redes Sociais</h9>
-            <!-- Adicione os ícones das redes sociais aqui -->
+            <h1>Redes Sociais</h1>
+            <img src="image/instagram.png" alt="Ícone" style="width: 40px; height: 40px; margin-right: 10px;">
+            <img src="image/facebook.png" alt="Ícone" style="width: 40px; height: 40px; margin-right: 10px;">
+            <img src="image/tiktok.png" alt="Ícone" style="width: 40px; height: 40px; margin-right: 10px;">
+
         </div>
     </div>
-    <div class="footer-bottom">
+
+    <div class="footer-end">
         <p>Todos direitos reservados para VagasJá 2024.</p>
     </div>
 </footer>
 
+
 <script src="js/menu.js" ></script>
+<script src="js/carousel.js" ></script>
+
 </body>
 </html>
 

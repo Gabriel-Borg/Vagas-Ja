@@ -1,0 +1,478 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,315;1,315&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap');
+
+    
+body {
+    background-color: #000000;
+}
+
+nav {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    background-color: #1A1A1A;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul.nav-menu li {
+    display: inline;
+    margin-right: 40px;
+}
+
+nav ul.nav-menu li a:hover {
+    color: white;
+    border-bottom: 1px solid #FFDF56; 
+    padding-bottom: 5px; /* Ajustando o espaçamento abaixo do texto */
+    margin-bottom: 5px; /* Ajustando o espaçamento abaixo da linha */
+}
+
+nav ul li {
+    color: #FFDF56;
+    list-style: none;
+    padding: 40px;
+    cursor: pointer;
+    font-family:  'Josefin Sans', sans-serif;
+}
+
+nav ul li a {
+    color: var(--yellow);
+    text-decoration: none;
+}
+
+img {
+    height: 70px;
+}
+
+.menu{
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar{
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    background: #FFDF56;
+    margin: 4px auto;
+    transition: all 0.3s;
+}
+
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: #FFDF56;
+}
+
+.container-bloco{
+    display: inline-flex;
+    flex-direction: column; /* Define a direção da flexbox como coluna */
+    align-items: center; /* Alinha os itens verticalmente */
+    width: 100%;
+    margin-top: -10px;
+    font-size: 30;
+}   
+
+.bloco-branco{
+    position: absolute;
+    top: 230px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 230px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+}
+
+.opcao button {    
+    display: inline-block; /* Coloca os botões um ao lado do outro */
+    margin-right: 20px; /* Aumenta o espaço entre os botões */
+    background-color: rgb(255, 255, 255); /* Remove o plano de fundo */
+    cursor: pointer; /* Cursor */
+    font-size: 16px; /* Tamanho da fonte */
+    padding: 10px 15px; /* Espaçamento interno */
+    border: 0px solid; /* Borda amarela */
+    border-radius: 6px; /* Arredonda a borda */
+    margin-top: 30px;
+    font-family: lato;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.opcao button:hover {
+    background-color: #FFDF56; 
+}
+
+
+h1{
+    font-size: 20;
+    font-family: Lato;
+    margin: 0;
+    color: #f0f0f0;
+}    
+    
+h2{
+    padding-top: 10px;
+    background-color: #FFDF56;
+    font-size: 20;
+    font-family: Lato;
+    margin: 0;
+    color: #000000;
+}
+
+.espaco{
+    padding-bottom: 90px;
+    position: absolute;
+    padding-top: 20px;
+    width: 100%;
+    height: 100px;
+    background-color: rgb(255, 224, 86); /* cor do quadrado com transparência */
+}
+        
+
+.texto {
+    position: absolute;
+    top: 81.7px; /* Afasta 20 pixels do topo */
+    width: 95.8rem;
+    height: 95px;
+    background-color: rgba(255, 227, 68, 0.7);
+    padding: 50px;
+	padding-left: 5px;
+}
+            
+	       
+.texto1 {
+    position: a;
+    background-color: rgba(255, 223, 86);
+    padding: 200px; /* Reduza o padding para evitar que o quadrado fique muito grande */
+    padding-left: 50px ;
+    padding-right: 50px;
+}
+
+.texto2 h2 {
+    margin: 0; /* Remova as margens padrão do h2 */
+    padding: 10px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.quadrado {
+    text-align: center;
+    color: #fff8f8;
+    font-family: "Lato", sans-serif;
+    margin-bottom: 20px;
+}
+
+.textos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Para que os elementos quebrem a linha se não couberem horizontalmente */
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: "Lexend Exa", sans-serif;
+    margin-top: 30px;
+    margin-right: 10px;
+}
+
+.amarelo {
+    color: #FFDF56;
+}
+
+
+.image-car,.testimonial-image2 {
+    width: 1000px; 
+    height: 300px;
+}
+
+.image-car {
+    margin-right: 29px; 
+}
+
+/* BLOCO INICIAL - PESQUISA */
+
+.bloco-amarelo {
+    position: absolute;
+    top: 120px; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 380px;
+    background-color: #FFDF56; /* cor do quadrado com transparência */
+    border-radius: 8px;
+    box-shadow: 5px 5px 10px #1A1A1A; /* sombra na parte inferior direita */
+}
+ 
+.text1 {
+    margin-top: 17px;
+    font-size: 29px;
+    font-family: Lato, sans-serif;
+    text-align: center;
+    color: #000000;
+}
+
+.text2 {
+    margin-top: -30px; /* Ajuste negativo para aproximar do texto1 */
+    font-size: 27px;
+    font-family: Lato, sans-serif;
+    font-weight: bold; /* Definir como negrito */
+    text-align: center;
+    color: #000000;
+}
+
+.garagem-img{
+    width: 100%;
+    height: 500px;
+}
+
+.garagem-mobile{
+    display: none;
+}
+
+.h2 {
+    margin: 0 auto; /* Define margens automáticas nos lados esquerdo e direito */
+}
+
+.item {
+       
+    color: black;
+    font-size: 20PX;
+    padding: 10px;
+    padding-top: 50px;
+    text-align: center;
+    font-family: LATO ;
+    border-radius: 8px;
+}
+
+.map-img{
+    width: 40px; /* Define a largura desejada */
+    height: 30px; /* Mantém a proporção da altura em relação à largura */
+    padding-top: 30px;
+    padding-right: 10px;
+    padding: center;
+}
+
+h6{
+    padding-top: 13px;
+    font-size: 20px;
+	font-family: Lato;
+    align-items: center;
+    text-align: center;
+	
+}
+
+.map-img2{
+    width: 50px; 
+    height: 40px; 
+    padding-top: 30px;
+    padding-right: 10px;
+    align-items: center;
+    padding: center;
+}
+
+.map-img3{
+    width: 50px; 
+    height: 40px; 
+    padding-top: 30px;
+    padding-right: 10px;
+    align-items: center;
+    padding: center;
+}
+
+.map-img4{
+    width: 50px; 
+    height: 40px; 
+    padding-top: 30px;
+    padding-right: 10px;
+    align-items: center;
+    padding: center;
+}
+
+.texto5 {
+    display: flex;
+    width: 60%; 
+    max-width: 800px; 
+    padding-top: 2px;
+    padding-left: 20px;
+    align-items: center;  
+}
+
+.textos h3 {        
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: "Lexend Exa", sans-serif;
+    margin-top: 30px;
+    margin-right: 10px; /* Ajuste o espaçamento entre os elementos conforme necessário */
+}
+
+.container-texto {
+    margin-top: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-texto h4 {
+    color: white;
+    font-family: "Lexend Exa", sans-serif;
+    font-size: 160%;
+    text-align: center;
+    flex: 1;
+    margin-left: 10px;
+    margin-right: 80px;
+}
+
+.container-texto img {
+    margin-right: 50px;
+    width: 500px; /* Ajuste a largura da imagem conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.container-btn{
+    display: inline-flex;
+    flex-direction: column; /* Define a direção da flexbox como coluna */
+    align-items: center; /* Alinha os itens verticalmente */
+    width: 100%;
+}
+
+.saiba-mais-btn {
+    background-color: #FFDF56; 
+    color: #000000; 
+    border: none; 
+    font-weight: bolder;
+    text-decoration: none; 
+    padding: 20px 50px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    text-align: center;
+    margin-left:-600px;
+    margin-top: -200px;
+    transition: border-color 0.3s;
+}
+    
+.saiba-mais-btn:hover {
+    background-color: #000000a9; 
+    color: #FFDF56;
+    border: 2px solid transparent;
+    border-color: #FFDF56;
+}
+
+.text-square {       
+    color: #f0f0f0;
+    padding-left: 190px;
+    width: 100px;
+    padding-top: 0px; 
+    line-height: 1.5; 
+}
+
+.footer-column{
+    color: #f0f0f0;
+    font-family: lato;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center; 
+    padding: 10px;
+}
+        
+.search-box form {
+    display: flex;
+    align-items: center;
+    padding-top: 10px;
+    
+}
+        
+.search-box input[type="text"] {            
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    width: 1500px; /* Defina a largura desejada */
+    margin-left: 900px;
+    border: 2px solid #ccc; /* Defina a borda */
+    padding-top: 10px;
+    margin-top: -200px;
+            
+}
+        
+.search-box button {
+    background-color: black; 
+    color: #FFDF56; 
+    border: none; 
+    padding: 8px 100px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    margin-left: -1450px;
+    margin-top: -50px;
+}
+        
+.search-box button:hover {
+    background-color: #68665a; 
+}
+
+.quadrado-texto h5{
+    font-size: 30px;
+    font-family: "Lexend Exa", sans-serif;
+    font-weight: bolder;
+    color: #f0f0f0;
+    margin-left: 70px;
+    margin-top: -60px; 
+}
+
+.avaliacao{
+    margin-left: 60px;
+    width: auto;
+    height: 90px;
+}
+
+.carousel {
+    position: relative;
+    width: 95%; /* Aumenta a largura para acomodar o espaço entre as imagens */
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 50px auto; /* Adiciona margem automática para centralizar horizontalmente */
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: calc(100% + 30px); /* Calcula a largura total incluindo o espaço entre as imagens */
+    margin-left: -15px; /* Compensa o espaçamento negativo para manter a posição correta */
+}
+
+.carousel-item {
+    min-width: calc(33.33% - 10px); /* Define a largura para exibir 3 imagens por vez com espaçamento */
+    margin-right: 15px; /* Adiciona espaçamento entre as imagens */
+}
+
+.carousel-img {
+    width: 100%;
+    height: auto; 
+    border-radius: 10px;
+}
+
+.map-img20 {
+    width: 100%;
+    height: auto;
+}
