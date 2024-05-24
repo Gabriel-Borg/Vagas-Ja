@@ -398,24 +398,20 @@ h6{
         
 .search-box form {
     display: flex;
+    flex-direction: column;
     align-items: center;
     padding-top: 10px;
-    
 }
         
 .search-box input[type="text"] {            
     padding: 8px;
     border: 2px solid #ccc;
     border-radius: 10px;
-    width: 1500px; /* Defina a largura desejada */
-    margin-left: 900px;
-    border: 2px solid #ccc; /* Defina a borda */
-    padding-top: 10px;
-    margin-top: -200px;
-            
+    width: 550px; /* Defina a largura desejada */
+    margin-bottom: 10px; /* Espaço entre o input e o botão */
 }
         
-.search-box button {
+.search-btn {
     background-color: black; 
     color: #FFDF56; 
     border: none; 
@@ -423,13 +419,13 @@ h6{
     font-size: 16px; 
     cursor: pointer; 
     border-radius: 5px; 
-    margin-left: -1450px;
-    margin-top: -50px;
+    margin-top: 20px;
 }
         
-.search-box button:hover {
+.search-btn:hover {
     background-color: #68665a; 
 }
+
 
 .quadrado-texto h5{
     font-size: 30px;
