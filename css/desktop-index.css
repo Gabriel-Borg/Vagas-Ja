@@ -322,6 +322,11 @@ h6{
     margin-right: 10px; /* Ajuste o espaçamento entre os elementos conforme necessário */
 }
 
+.car-mob{
+    display: none;
+}
+
+
 .container-texto {
     margin-top: 70px;
     display: flex;
