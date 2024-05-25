@@ -83,7 +83,7 @@ img {
     align-items: center; /* Alinha os itens verticalmente */
     width: 100%;
     margin-top: -10px;
-    font-size: 30;
+    font-size: 30px;
 }   
 
 .bloco-branco{
@@ -471,4 +471,8 @@ h6{
 .map-img20 {
     width: 100%;
     height: auto;
+}
+
+.img-info{
+    display: none;
 }

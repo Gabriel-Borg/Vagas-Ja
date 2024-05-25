@@ -57,23 +57,18 @@
         height: 49%;
         background-color: transparent;
         border-radius: 8px;
+        margin-top: -13%;
+        font-size: 90%;
     }
-
-    .container-bloco{
-        display: inline-flex;
-        flex-direction: column; /* Define a direção da flexbox como coluna */
-        align-items: center; /* Alinha os itens verticalmente */
-        width: 100%;
-    }   
 
     .opcao button { 
         display: inline-block; /* Coloca os botões um ao lado do outro */
-        margin-right: 8px; /* Aumenta o espaço entre os botões */
+        margin-right: 5px; /* Aumenta o espaço entre os botões */
         padding: 8px 15px; /* Espaçamento interno */
         border: 0px solid; /* Borda amarela */
         border-radius: 20px; /* Arredonda a borda */
         font-family: lato;
-        font-size: 95%;
+        font-size: 47%;
     }
 
     .opcao button:hover {
@@ -82,33 +77,98 @@
 
     /* AJUSTAR O BOTÃO DE PESQUISA */
 
-    .search-box{
-        width: 80%;
+    .search-box form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+    }
+            
+    .search-box input[type="text"] {            
+        padding: 8px;
+        border: 2px solid #ccc;
+        border-radius: 10px;
+        width: 150%; /* Defina a largura desejada */
+        margin-bottom: 10px; /* Espaço entre o input e o botão */
+    }
+            
+    .search-btn {
+        background-color: black; 
+        color: #FFDF56; 
+        border: none; 
+        padding: 8px 27%; 
+        font-size: 16px; 
+        cursor: pointer; 
+        border-radius: 5px; 
+        margin-top: 20px;
     }
 
      /* AJUSTAR O BOTÃO DE PESQUISA */
 
      .textos h3 {        
-        font-size: 95%;
+        font-size: 70%;
         font-weight: bolder;
         font-family: "Lexend Exa", sans-serif;
-        margin-top: 20px;
+        margin-top: 10px;
         margin-left: 20px; /* Ajuste o espaçamento entre os elementos conforme necessário */
     }
 
     .image-car {
+        display: none;
+    }
+
+    .car-mob{
         position: center;
         width: 100%;
         height: 50%;
     }
 
-    .textao{
-        width: 100%;
-        margin-top: 30px;
-        margin-left: 1%;
-        font-size: 76%;
+    .map-img20{
+        display: none;
     }
-    .map.img5 {
 
+    .img-info {
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .container-texto{
+        display: block;
+    }
+
+    .container-texto img{
+        display: block;
+        margin-top: 10%;
+        height: 80%;
+        width: 100%;
+    }
+
+    .container-texto h4{
+        margin-top: -30px;
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 120%;
+    }
+
+    .saiba-mais-btn{
+        display: none;
+    }
+
+    .quadrado-texto h5 {
+        margin: 40px;
+        margin-top: 10px;
+        font-size: 140%;
+    }
+
+    .avaliacao{
+        margin-left: 40px;
+        margin-top: -20px;
+        height: 50px;
+    }
+
+    .carousel-img{
+        display: flex;
+        width: 110%;
     }
   }
