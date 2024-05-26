@@ -14,6 +14,7 @@ body {
     justify-content: space-between;
     padding: 0 10px;
     background-color: #1A1A1A;
+<<<<<<< HEAD
   }
   
   nav ul {
@@ -33,18 +34,46 @@ body {
   }
   
   nav ul.nav-menu li a:hover {
+=======
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+}
+
+nav ul.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul.nav-menu li {
+    display: inline;
+    margin-right: 40px;
+}
+
+nav ul.nav-menu li a:hover {
+>>>>>>> 5a9a20d (alterações)
     color: white;
     border-bottom: 1px solid #FFDF56; 
     padding-bottom: 5px; /* Ajustando o espaçamento abaixo do texto */
     margin-bottom: 5px; /* Ajustando o espaçamento abaixo da linha */
+<<<<<<< HEAD
   }
   
   nav ul li {
+=======
+}
+
+nav ul li {
+>>>>>>> 5a9a20d (alterações)
     color: #FFDF56;
     list-style: none;
     padding: 40px;
     cursor: pointer;
     font-family:  'Josefin Sans', sans-serif;
+<<<<<<< HEAD
   }
   
   nav ul li a {
@@ -56,6 +85,18 @@ body {
     height: 70px;
     margin-left: -220px;
   }
+=======
+}
+
+nav ul li a {
+    color: var(--yellow);
+    text-decoration: none;
+}
+
+img {
+    height:70px;
+}
+>>>>>>> 5a9a20d (alterações)
   
   .menu{
     cursor: pointer;
@@ -175,6 +216,11 @@ body {
     margin-bottom: 5px;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> parent of 2f9016d (alterações de ajustes)
 body {
     background-color: #000000;
 }
@@ -225,10 +271,20 @@ nav ul li a {
     text-decoration: none;
 }
 
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 2f9016d (alterações de ajustes)
 img {
     height: 55px;
 }
 
+<<<<<<< HEAD
+=======
+>>>>>>> 5a9a20d (alterações)
+>>>>>>> 4e85eb500c938469c5d80c1fc4403cc0ffbe730f
+=======
+>>>>>>> parent of 2f9016d (alterações de ajustes)
 h1{
     font-size: 20;
     font-family: Lato;
