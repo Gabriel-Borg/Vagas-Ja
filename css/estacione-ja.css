@@ -2,6 +2,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,315;1,315&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap');
 
+body {
+    background-color: #000000;
+  }
+  
+  nav {
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    background-color: #1A1A1A;
+  }
+  
+  nav ul {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  nav ul.nav-menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul.nav-menu li {
+    display: inline;
+    margin-right: 40px;
+  }
+  
+  nav ul.nav-menu li a:hover {
+    color: white;
+    border-bottom: 1px solid #FFDF56; 
+    padding-bottom: 5px; /* Ajustando o espaçamento abaixo do texto */
+    margin-bottom: 5px; /* Ajustando o espaçamento abaixo da linha */
+  }
+  
+  nav ul li {
+    color: #FFDF56;
+    list-style: none;
+    padding: 40px;
+    cursor: pointer;
+    font-family:  'Josefin Sans', sans-serif;
+  }
+  
+  nav ul li a {
+    color: var(--yellow);
+    text-decoration: none;
+  }
+  
+  img {
+    height: 70px;
+    margin-left: -220px;
+  }
+  
+  .menu{
+    cursor: pointer;
+    display: none;
+  }
+  
+  .menu .bar{
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    background: #FFDF56;
+    margin: 4px auto;
+    transition: all 0.3s;
+  }
+  
+  .menu .bar:nth-child(1),
+  .menu .bar:nth-child(3){
+    background: #FFDF56;
+  }
 
 
 #map {
@@ -19,6 +93,26 @@
     display: flex;
     align-items: center;
     width: 200px!important;   
+}
+
+.search {
+    background-color: #FFDF56; /* Amarelo */
+    color: #000; /* Preto */
+    border: none;
+    border-radius: 25px; /* Bordas arredondadas */
+    padding: 12px 24px; /* Espaçamento interno */
+    font-size: 16px; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    text-transform: uppercase; /* Transformar texto em maiúsculas */
+    letter-spacing: 1px; /* Espaçamento entre caracteres */
+    cursor: pointer; /* Cursor de ponteiro ao passar por cima */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+/* Estilos para hover */
+.search:hover {
+    background-color: #ffd51c; /* Amarelo mais escuro ao passar por cima */
+    color: #fff; /* Texto branco ao passar por cima */
 }
 
 #location-input {
@@ -181,3 +275,40 @@ h1{
     margin-top: 10px; /* Espaçamento acima do botão */
     font-size: larger;
 }
+
+@media  (max-width:755px) {
+
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+  
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 64px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: #1A1A1A;
+        gap: -10px;
+        transition: 0.3s;
+        z-index: 10001;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin-top: 30px;
+        margin: 10px;
+        margin-bottom: -25px;
+    }
+}  

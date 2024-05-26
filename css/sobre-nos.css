@@ -4,63 +4,78 @@
 
 body {
     background-color: #000000;
-    background: #000000;
-}
-
-nav {
+  }
+  
+  nav {
     width: 100%;
     height: 75px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 10px;
     background-color: #1A1A1A;
-}
-
-nav ul {
+  }
+  
+  nav ul {
     display: flex;
     flex-direction: row;
-}
-
-nav ul.menu-normal {
+  }
+  
+  nav ul.nav-menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
-}
-
-nav ul.menu-normal li {
+  }
+  
+  nav ul.nav-menu li {
     display: inline;
-    margin-right: 20px;
-}
-
-nav ul.menu-normal li a:hover {
+    margin-right: 40px;
+  }
+  
+  nav ul.nav-menu li a:hover {
     color: white;
     border-bottom: 1px solid #FFDF56; 
     padding-bottom: 5px; /* Ajustando o espaçamento abaixo do texto */
     margin-bottom: 5px; /* Ajustando o espaçamento abaixo da linha */
-}
-
-nav ul li {
+  }
+  
+  nav ul li {
     color: #FFDF56;
     list-style: none;
     padding: 40px;
     cursor: pointer;
     font-family:  'Josefin Sans', sans-serif;
-}
-
-nav ul li a {
+  }
+  
+  nav ul li a {
     color: var(--yellow);
     text-decoration: none;
-}
-
-
-
-
-
-img {
-    height: 55px;
-    
-}
+  }
+  
+  img {
+    height: 70px;
+    margin-left: -220px;
+  }
+  
+  .menu{
+    cursor: pointer;
+    display: none;
+  }
+  
+  .menu .bar{
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    background: #FFDF56;
+    margin: 4px auto;
+    transition: all 0.3s;
+  }
+  
+  .menu .bar:nth-child(1),
+  .menu .bar:nth-child(3){
+    background: #FFDF56;
+  }
 
 h1 {
     text-align: left;
@@ -73,17 +88,12 @@ h1 {
 }
 
 h2 {
-
-     
-        text-align: center;
-        font-size: 30px;
-        color: #ffffff;
-      
-        margin-top: 3%;
-        font-family: "Lexend Exa", sans-serif;
-        font-weight:bold;
-    
-
+    text-align: center;
+    font-size: 30px;
+    color: #ffffff;
+    margin-top: 3%;
+    font-family: "Lexend Exa", sans-serif;
+    font-weight:bold;
 }
 
 .content-wrapper {
@@ -164,25 +174,14 @@ div p {
     border-radius: 50%; /* Faz a imagem circular */
 }
 
-.rapaziada {
+.rapaziada img {
     display: flex;
     justify-content: center;
-}
+    margin-left: 10%;
+    width: 80%; 
+    height: 100%;  
 
-.rapaziada img {
-    width: 1125px;
-    height: 595px;
 }
-.rapaziada {
-    width: 1350px; 
-    max-width: 1500px; 
-    margin-left: auto; 
-    margin-right: auto; 
-    padding-left: center; 
-    padding-top: 40px; 
-    margin-left: 400px;
-  }
-
 
 .estrada img {
     margin-top: 40px;
@@ -297,4 +296,167 @@ div p {
     padding: 3px 0;
     color: black;
     margin-top: 2%;
+}
+
+@media  (max-width:755px) {
+
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 64px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: #1A1A1A;
+        gap: -10px;
+        transition: 0.3s;
+        z-index: 10001;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin-top: 30px;
+        margin: 10px;
+        margin-bottom: -25px;
+    }
+
+    h1 {
+        font-size: 160%;
+        margin-left: 5% !important;
+        margin-top: 5% !important;
+
+    }
+
+    div p{
+        font-size: 120%;
+        margin-left: -8%;
+        margin-top: -30px;
+    }
+
+    .text-wrapper2{
+        margin-top: 12%;
+    }
+}  
+
+/* PARTE FINAL */
+/*  */
+/* PARTE FINAL */
+
+.linha-separacao {
+    width: 80%; /* Ajuste a largura da linha conforme necessário */
+    margin: 20px auto; /* Centraliza a linha horizontalmente e adiciona espaço vertical */
+    border: 0; /* Remove qualquer borda padrão */
+    height: 5px; /* Define a altura da linha */
+    background-color: #FFDF56; /* Define a cor da linha */
+}
+
+.footer {
+    font-weight: bolder;
+    margin-top: 30px; /* Ajustei para um valor positivo para alinhar melhor o footer */
+    background-color: black; /* Cor de fundo do footer */
+    color: #fff;
+    text-align: center; /* Centralizar o texto do footer */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px; /* Adicionei um padding para separar o conteúdo do footer das bordas */
+}
+
+.footer-column {
+    width: 25%;
+    text-align: left; /* Alinhar o texto à esquerda */
+    padding: 0 20px; /* Adicionei um padding para espaçamento interno */
+}
+
+.footer-column h1 {
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 15px; /* Adicionei um margin-bottom para separar os títulos das listas */
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-info li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Espaçamento entre os itens */
+}
+
+.contact-info li img {
+    margin-right: 10px;
+}
+
+.contact-info li span {
+    font-weight: normal; /* Removendo o negrito dos textos das informações de contato */
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: normal; /* Removendo o negrito dos textos das listas */
+}
+
+.footer-column p {
+    margin: 0; /* Removi o margin-top para os parágrafos dentro das colunas */
+    font-family: 'Arial', Helvetica, sans-serif;
+}
+
+
+.footer-end p{
+    font-weight: normal; /* Removendo o negrito dos textos das listas */
+    background-color: #FFDF56;
+    text-align: center;
+    padding: 10px 0; 
+    color: black;
+    margin-top: 20px; /* Ajustei o margin-top para um valor maior */
+}
+
+@media (max-width: 768px) {
+
+    .linha-separacao{
+        margin-top: 60px;
+    }
+
+    h1{
+        margin-left: -10px;
+        margin-top: -30px;
+    }
+
+    .footer-column {
+        width: 100%; /* Uma coluna por linha em telas pequenas */
+        text-align: left; /* Centralizar o texto em telas pequenas */
+        padding: 10px 0; /* Ajustar o padding para telas pequenas */
+    }
+
+    .contact-info li {
+        justify-content: center; /* Centralizar itens de contato em telas pequenas */
+    }
 }

@@ -3,8 +3,8 @@
 <head>
     <title>Estacione Já</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.0">
-    <link rel="icon" href="image/casa.png" type="image/png">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
+    <link rel="shortcut icon" href="image/icon.png" type="image/png">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/estacione-ja.css">
@@ -12,35 +12,29 @@
     
     <title>Mapa de Estacionamentos</title>
 </head>
+
 <body>
-<nav>
-    <div class="search-container">
-        <input id="location-input" type="text" placeholder="Digite o ponto de busca...">
-        <button id="search" class="search">Buscar</button>
-    </div>
-
-    <a href="index.html">
-        <p class="brand">
-          <img src="image/logo_vagas.png" alt="Logo"/>
-        </p>
-      </a>
-
-    <div class="menu-icon" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-
-    <ul class="menu-normal">
-        <li><a href="estacioneJa.html">Estacione Já</a></li>
-        <li><a href="trabalheconosco.html">Trabalhe Conosco</a></li>
-        <li><a href="sobrenos.html">Sobre Nós</a></li>
-        <li>
-          <img src="image/usuario.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
-          <a href="login.html">Cadastro | Login</a>
-      </li>
-    </ul>
-</nav>
+    <header>
+        <nav class ="navigation">
+            <div class="search-container">
+                <input id="location-input" type="text" placeholder="Digite o ponto de busca...">
+            </div>
+            <a href="index.html"></a>
+            <img src="image/logo_vagas.png" alt="Logo"/>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="estacioneJa.html">Estacione Já</a></li>
+                <li class="nav-item"><a href="trabalheconosco.html">Trabalhe Conosco</a></li>
+                <li class="nav-item"><a href="sobrenos.html">Sobre Nós</a></li>
+                <li><img src="image/usuario.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
+                <a href="login.html">Cadastro | Login</a></li>
+            </ul>
+            <div class="menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
 
 <div id="map"></div>
 
@@ -110,5 +104,6 @@
   </script>
    
 <script src="js/script.js"></script>
+<script src="js/menu.js"></script>
 </body>
 </html>

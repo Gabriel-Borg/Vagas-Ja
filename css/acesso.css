@@ -1,5 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,315;1,315&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap');
 
+    
 body {
     font-family: 'Josefin Sans', sans-serif;
     background-color: #f4f4f4;
@@ -14,7 +17,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 10px;
     background-color: #1A1A1A;
 }
 
@@ -23,18 +26,18 @@ nav ul {
     flex-direction: row;
 }
 
-nav ul.menu-normal {
+nav ul.nav-menu {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
-nav ul.menu-normal li {
+nav ul.nav-menu li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 40px;
 }
 
-nav ul.menu-normal li a:hover {
+nav ul.nav-menu li a:hover {
     color: white;
     border-bottom: 1px solid #FFDF56; 
     padding-bottom: 5px; /* Ajustando o espaçamento abaixo do texto */
@@ -55,7 +58,27 @@ nav ul li a {
 }
 
 img {
-    height: 55px;
+    height: 70px;
+}
+
+.menu{
+    cursor: pointer;
+    display: none;
+}
+
+.menu .bar{
+    display: block;
+    width: 30px;
+    height: 3px;
+    border-radius: 3px;
+    background: #FFDF56;
+    margin: 4px auto;
+    transition: all 0.3s;
+}
+
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: #FFDF56;
 }
 
 .main-content {
@@ -63,7 +86,6 @@ img {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin-top: 75px; /* Espaço para a barra de navegação */
 }
 
 .form-container {
@@ -122,4 +144,42 @@ img {
 
 .form-container p a:hover {
     text-decoration: underline;
+}
+
+
+@media  (max-width:750px) {
+    /* MENU RESPONSIVO */
+    .menu{
+        display: block;
+    }
+    .menu.ativo .bar:nth-child(1){
+        transform:  translateY(8px) rotate(45deg);
+    }
+    .menu.ativo .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .menu.ativo .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .nav-menu{
+        position: fixed;
+        right: -100%;
+        top: 64px;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background: #1A1A1A;
+        gap: -10px;
+        transition: 0.3s;
+        z-index: 10001;
+    }
+    .nav-menu.ativo{
+        right: 0;
+    }
+    .nav-item{
+        margin-top: 30px;
+        margin: 10px;
+        margin-bottom: -25px;
+    }
 }
