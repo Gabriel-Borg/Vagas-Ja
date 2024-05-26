@@ -81,3 +81,25 @@
     color: black;
     margin-top: 20px; /* Ajustei o margin-top para um valor maior */
 }
+
+@media (max-width: 768px) {
+
+    .linha-separacao{
+        margin-top: 60px;
+    }
+
+    h1{
+        margin-left: -10px;
+        margin-top: -30px;
+    }
+
+    .footer-column {
+        width: 100%; /* Uma coluna por linha em telas pequenas */
+        text-align: left; /* Centralizar o texto em telas pequenas */
+        padding: 10px 0; /* Ajustar o padding para telas pequenas */
+    }
+
+    .contact-info li {
+        justify-content: center; /* Centralizar itens de contato em telas pequenas */
+    }
+}

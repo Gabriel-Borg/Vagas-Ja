@@ -1,51 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <title>Trabalhe Conosco</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
     <link rel="shortcut icon" href="image/icon.png" type="image/png">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/trabalhe-conosco.css">
     <link rel="stylesheet" href="css/rodape.css">
+    <title>Trabalhe Conosco</title>
 
 </head>
+
 <body>
-    
-<nav>
-  <a href="index.html">
-    <p class="brand">
-      <img src="image/logo_vagas.png" alt="Logo"/>
-    </p>
-  </a>
+  <header>
+      <nav class ="navigation">
+          <a href="index.html">
+          <img src="image/logo_vagas.png" alt="Logo"/>
+          <ul class="nav-menu">
+              <li class="nav-item"><a href="estacioneJa.html">Estacione Já</a></li>
+              <li class="nav-item"><a href="trabalheconosco.html">Trabalhe Conosco</a></li>
+              <li class="nav-item"><a href="sobrenos.html">Sobre Nós</a></li>
+              <li><img src="image/usuario.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
+              <a href="login.html">Cadastro | Login</a></li>
+          </ul>
+          <div class="menu">
+              <span class="bar"></span>
+              <span class="bar"></span>
+              <span class="bar"></span>
+          </div>
+      </nav>
+  </header>
 
-    <div class="menu-icon" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-    </div>
-
-    <ul class="menu-normal">
-        <li><a href="estacioneJa.html">Estacione Já</a></li>
-        <li><a href="trabalheconosco.html">Trabalhe Conosco</a></li>
-        <li><a href="sobrenos.html">Sobre Nós</a></li>
-        <li>
-          <img src="image/usuario.png" alt="Ícone" style="width: 20px; height: 20px; margin-right: 10px;">
-          <a href="login.html">Cadastro | Login</a>
-      </li>
-    </ul>
-</nav>
-
-<h1>Trabalhe Conosco</h1>
+<h1 class="titulo">Trabalhe Conosco</h1>
 
 <div class="content-wrapper">
-    <img src="image/principal 1.png" alt="principal1">
+    <img src="image/principal 1.png" class="principal1">
+    <img src="image/tb-mobile.png"  class="tb-mobile">
     <div class="text-wrapper">
         <p>Junte-se a nós para transformar a forma como as pessoas estacionam nas cidades! Estamos construindo uma rede digital de estacionamentos
             fora da rua para otimizar espaços e facilitar o acesso ao estacionamento, buscando colaboradores motivados e criativos que desejam 
             integrar seus estacionamentos ao nosso aplicativo.</p>
-        <button class="Aumente-seus-clientes-btn">Aumente seus clientes!</button>
+        <button class="clientes-btn">Aumente seus clientes!</button>
     </div>
 </div>
 
@@ -55,12 +51,16 @@
         informações. Estamos ansiosos para receber sua candidatura e descobrir como podemos trabalhar juntos para melhorar a forma como as pessoas
         se deslocam e estacionam nas cidades.</p>
     </div>
-    <img src="image/principal 2.png" alt="principal2">
+    <img src="image/principal 2.png" class="principal2">
+    <img src="image/tb-mobile2.png"  class="tb-mobile2">
+
 </div>
+
 <div class="estrada">
-    <img src="image/Menu-Fixo.png" alt="principal3">
+    <img src="image/Menu-Fixo.png" class="principal3">
+    <img src="image/Menu-Fixo-mb.png" class="principal3-mb">
   <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-lg">
-    <h1 class="text-3xl font-bold mb-0 text-center">Informações Pessoais</h1>
+    <h1 class="text-center">Informações Pessoais</h1>
     <div class="yellow-line"></div>
     <form>
       <div class="grid grid-cols-2 gap-4 mb-4">
@@ -198,7 +198,7 @@
                 class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500"
               >
                 <span>Upload a file</span>
-                <input id="file-upload" name="file-upload" type="file" class="sr-only" />
+                <input id="file-upload" name="file-upload" type="file" class="file-upload" />
               </label>
               <p class="pl-1">or drag and drop</p>
             </div>
@@ -267,6 +267,7 @@
     </div>
 </footer>
 
+<script src="js/menu.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>
