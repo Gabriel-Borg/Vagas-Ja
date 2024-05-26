@@ -3,81 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@100..900&display=swap');
 
 body {
-<<<<<<< HEAD
-    background-color: #000000;
-  }
-  
-  nav {
-    width: 100%;
-    height: 75px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10px;
-    background-color: #1A1A1A;
-  }
-  
-  nav ul {
-    display: flex;
-    flex-direction: row;
-  }
-  
-  nav ul.nav-menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav ul.nav-menu li {
-    display: inline;
-    margin-right: 40px;
-  }
-  
-  nav ul.nav-menu li a:hover {
-    color: white;
-    border-bottom: 1px solid #FFDF56; 
-    padding-bottom: 5px; /* Ajustando o espaçamento abaixo do texto */
-    margin-bottom: 5px; /* Ajustando o espaçamento abaixo da linha */
-  }
-  
-  nav ul li {
-    color: #FFDF56;
-    list-style: none;
-    padding: 40px;
-    cursor: pointer;
-    font-family:  'Josefin Sans', sans-serif;
-  }
-  
-  nav ul li a {
-    color: var(--yellow);
-    text-decoration: none;
-  }
-  
-  img {
-    height: 70px;
-    margin-left: -220px;
-  }
-  
-  .menu{
-    cursor: pointer;
-    display: none;
-  }
-  
-  .menu .bar{
-    display: block;
-    width: 30px;
-    height: 3px;
-    border-radius: 3px;
-    background: #FFDF56;
-    margin: 4px auto;
-    transition: all 0.3s;
-  }
-  
-  .menu .bar:nth-child(1),
-  .menu .bar:nth-child(3){
-    background: #FFDF56;
-  }
-=======
   background-color: #000000;
 }
 
@@ -150,7 +75,6 @@ img {
 .menu .bar:nth-child(3){
   background: #FFDF56;
 }
->>>>>>> 5a9a20d (alterações)
 
 h1 {
     text-align: left;
@@ -279,17 +203,6 @@ div p {
   gap: 1rem;
 }
 
-<<<<<<< HEAD
-=======
-.linkedin{
-    height: 30px !important;; 
-    width: 30px !important;; 
-    border-radius: 3px !important;; 
-    margin-top: 10px !important;; 
-    margin-left: 20px !important;; 
-    margin-bottom: 20px !important;;
-}
->>>>>>> 5a9a20d (alterações)
 
 .yellow-line {
     width: 750px;
@@ -525,7 +438,6 @@ div p {
     margin-top: 20px; /* Ajustei o margin-top para um valor maior */
 }
 
-<<<<<<< HEAD
 @media (max-width: 768px) {
 
     .linha-separacao{
@@ -546,50 +458,4 @@ div p {
     .contact-info li {
         justify-content: center; /* Centralizar itens de contato em telas pequenas */
     }
-=======
-@media  (max-width:755px) {
-
-.menu{
-    display: block;
-}
-.menu.ativo .bar:nth-child(1){
-    transform:  translateY(8px) rotate(45deg);
-}
-.menu.ativo .bar:nth-child(2) {
-    opacity: 0;
-}
-.menu.ativo .bar:nth-child(3){
-    transform: translateY(-8px) rotate(-45deg);
-}
-  
-.nav-menu{
-    position: fixed;
-    right: -100%;
-    top: 64px;
-    width: 100%;
-    height: 100%;
-    flex-direction: column;
-    background: #1A1A1A;
-    gap: -10px;
-    transition: 0.3s;
-    z-index: 10001;
-}
-.nav-menu.ativo{
-    right: 0;
-}
-.nav-item{
-    margin-top: 30px;
-    margin: 10px;
-    margin-bottom: -25px;
-}
-
-.linkedin{
-    height: 30px !important;; 
-    width: 30px !important;; 
-    border-radius: 3px !important;; 
-    margin-top: 10px !important;; 
-    margin-left: 20px !important;; 
-    margin-bottom: 20px !important;; 
-}
->>>>>>> 5a9a20d (alterações)
 }
