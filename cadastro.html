@@ -3,17 +3,19 @@
 <head>
     <title>Cadastro - Vagas Já</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=10, minimum-scale=1.0">
     <link rel="shortcut icon" href="image/icon.png" type="image/png">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="css/acesso.css">
-
+    <script src="https://www.gstatic.com/firebasejs/6.0.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
 </head>
+
 <body>
     <header>
         <nav class ="navigation">
-            <a href="index.html"></a>
+            <a href="index.html">
             <img src="image/logo_vagas.png" alt="Logo"/>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="estacioneJa.html">Estacione Já</a></li>
@@ -42,14 +44,14 @@
             
             <label for="senha">Senha:</label>
             <input type="password" id="senha" name="senha" required>
-            
-            <button type="submit">Cadastrar</button>
-        </form>
+                      
+          </form>
+          <button  onclick="grava()" >Cadastrar</button>
         <p>Já tem uma conta? <a href="login.html">Login</a></p>
     </div>
 </div>
 
-<script src="js/menu.js" ></script>
-
+<script src="js/firebaseconfig.js"></script>
+<script src="js/menu.js"></script>
 </body>
 </html>

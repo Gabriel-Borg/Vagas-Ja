@@ -37,23 +37,25 @@
 }
 
 .contact-info {
+    font-weight: normal; 
     list-style: none;
-    padding: 0;
-    margin: 0;
 }
 
 .contact-info li {
     display: flex;
     align-items: center;
-    margin-bottom: 10px; /* Espaçamento entre os itens */
+    margin-bottom: 10px; /* Espaçamento entre os itens de contato */
 }
 
-.contact-info li img {
-    margin-right: 10px;
+.contact-info img {
+    width: 24px; /* Ajuste o tamanho do ícone conforme necessário */
+    height: 24px; /* Ajuste o tamanho do ícone conforme necessário */
+    margin-right: 10px; /* Espaçamento entre o ícone e o texto */
 }
 
-.contact-info li span {
-    font-weight: normal; /* Removendo o negrito dos textos das informações de contato */
+.contact-info .fone,
+.contact-info .atendimento {
+    font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
 }
 
 .footer-column ul {
@@ -88,18 +90,27 @@
         margin-top: 60px;
     }
 
-    h1{
+    .footer-column h1{
         margin-left: -10px;
-        margin-top: -30px;
     }
 
     .footer-column {
         width: 100%; /* Uma coluna por linha em telas pequenas */
-        text-align: left; /* Centralizar o texto em telas pequenas */
+        text-align: left !important; /* Centralizar o texto em telas pequenas */
         padding: 10px 0; /* Ajustar o padding para telas pequenas */
     }
 
     .contact-info li {
         justify-content: center; /* Centralizar itens de contato em telas pequenas */
     }
+
+    .contact-info img {
+        margin-left: -90px;
+  
+    }
+
+    .contact-info .fone{
+        margin-left: 50px;
+        text-align: right;
+    }      
 }

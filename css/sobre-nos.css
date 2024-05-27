@@ -76,7 +76,7 @@ img {
   background: #FFDF56;
 }
 
-h1 {
+.titulo {
     text-align: left;
     font-size: 30px;
     color: white;
@@ -107,9 +107,15 @@ h2 {
     margin-top: 30px;
 }
 
-.text-wrapper {
+.text-wrapper, .text-wrapper2   {
     flex: 1;
     padding: 0 25px;
+    color: white;
+    font-size: 35px;
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 10px;
+    text-align: left;
+    padding-right: 20px; /* Adiciona espaçamento entre o texto e a imagem */
 }
 
 .content-wrapper2 {
@@ -117,16 +123,7 @@ h2 {
     align-items: center;
 }
 
-
-
-.text-wrapper2 {
-    flex: 1;
-    padding: 0 25px;
-    margin-left: 40px;
-    margin-top: 10px;
-}
-
-div p {
+.cargo {
   color: white;
   font-size: 35px;
   font-family: 'Josefin Sans', sans-serif;
@@ -139,38 +136,6 @@ div p {
     display: flex;
     align-items: center;
     margin-top: 50px; /* Ajuste o espaçamento entre as duas seções conforme necessário */
-}
-
-.text-wrapper {
-    flex: 1;
-    padding-right: 20px; /* Adiciona espaçamento entre o texto e a imagem */
-    margin-left: 40px;
-    
-}
-
-
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
-    gap: 20px; /* Espaçamento entre as imagens */
-}
-
-.image-item {
-    text-align: center;
-    
-   
-    margin: 0 auto; /* Alinha o contêiner no centro */
-}
-
-.image-item a {
-    text-decoration: none; /* Remove sublinhado */
-    color: inherit; /* Mantém a cor do texto */
-}
-
-.image-item img {
-    width: 100px; /* Define a largura da imagem */
-    height: 90px; /* Define a altura da imagem */
-    border-radius: 50%; /* Faz a imagem circular */
 }
 
 .rapaziada img {
@@ -189,6 +154,10 @@ div p {
     
 }
 
+.estrada-mb img {
+    display: none;
+}
+
 .grid-cols-2 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: 15px;
@@ -203,108 +172,38 @@ div p {
   gap: 1rem;
 }
 
-.linkedin img{
-    height: 30px;
-    width: 30px;
-    border-radius: 3px; 
-    margin-top: 10px; 
-    margin-left: 20px; 
-    margin-bottom: 20px;
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+    gap: 20px; /* Espaçamento entre as imagens */
 }
 
-.yellow-line {
-    width: 750px;
-    height: 3px;
-    background-color: #FFDF56; 
-    margin: 20px 0; /* Espaçamento acima e abaixo da linha */
-    margin-top: 3%;
-    margin-left: 100px;
+/* EQUIPE */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */
+    gap: 20px; /* Espaçamento entre as imagens */
 }
 
-  .yellow-line {
-    height: 2px;
-    background-color: #FFDF56; 
-    margin: 20px 0; /* Espaçamento acima e abaixo da linha */
-    margin-top: 7%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 1100px;
-}
-.footer {
-  margin-top: -30px;
-  background-color: black; /* Cor de fundo do footer */
-  color: #fff; 
-  text-align: center; /* Centralizar o texto do footer */
-  background: black;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    background-color: black;
-}
-
-.footer-column {
-    width: 25%;
-    padding-top: 15px; 
-    text-align: left; /* Alinhar o texto à esquerda */
-    margin-left: -11%
-}
-
-.footer-column h9 {
-    font-weight: bold;
-    font-size: 25px;
-    margin-bottom: 15px; /* Adicionei um margin-bottom para separar os títulos das listas */
-}
-
-.contact-info {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.contact-info li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px; /* Espaçamento entre os itens */
-}
-
-.contact-info li img {
-    margin-right: 10px;
-}
-
-.footer-column ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.footer-column li {
-    margin-bottom: 10px;
-}
-
-.footer-column p {
-  margin: 0; /* Removi o margin-top para os parágrafos dentro das colunas */
-  font-family: 'Arial', Helvetica, sans-serif;
-}
-
-.footer-bottom .footer-text {
-  color: black; /* ou qualquer cor que você deseja */
-  font-size: 14px; /* tamanho de fonte desejado */
-  font-family: 'Arial', sans-serif; /* ou qualquer outra família de fontes */
-  text-align: center; /* alinhamento desejado */
-}
-
-.footer-bottom {
-    background-color: #FFDF56; 
+.image-item {
     text-align: center;
-    padding: 3px 0;
-    color: black;
-    margin-top: 2%;
+    margin: 0 auto; /* Alinha o contêiner no centro */
 }
 
+.image-item a {
+    text-decoration: none; /* Remove sublinhado */
+    color: inherit; /* Mantém a cor do texto */
+}
+
+.image-item img {
+    width: 100px; /* Define a largura da imagem */
+    height: 90px; /* Define a altura da imagem */
+    border-radius: 50%; /* Faz a imagem circular */
+}
+
+/* EQUIPE  FINAL*/
+
+/* RESPONSIVO */
 @media  (max-width:755px) {
 
     .menu{
@@ -341,153 +240,58 @@ div p {
         margin-bottom: -25px;
     }
 
-    h1 {
+    .titulo {
         font-size: 160%;
         margin-left: 5% !important;
         margin-top: 5% !important;
 
     }
 
-    div p{
-        font-size: 120%;
-        margin-left: -8%;
-        margin-top: -30px;
+    .estrada img {
+        display: none;
+    }
+    
+    .estrada-mb img {
+        display: block;
+        margin-top: 40px;
+        width: 100%;
+        height: auto;
+    }
+    
+    .text-wrapper, .text-wrapper2{
+        font-size: 100%;
+        margin-left: -2%;
+        margin-top: -10px;
     }
 
     .text-wrapper2{
-        margin-top: 12%;
-    }
-}  
-
-/* PARTE FINAL */
-/*  */
-/* PARTE FINAL */
-
-.linha-separacao {
-    width: 80%; /* Ajuste a largura da linha conforme necessário */
-    margin: 20px auto; /* Centraliza a linha horizontalmente e adiciona espaço vertical */
-    border: 0; /* Remove qualquer borda padrão */
-    height: 5px; /* Define a altura da linha */
-    background-color: #FFDF56; /* Define a cor da linha */
-}
-
-.footer {
-    font-weight: bolder;
-    margin-top: 30px; /* Ajustei para um valor positivo para alinhar melhor o footer */
-    background-color: black; /* Cor de fundo do footer */
-    color: #fff;
-    text-align: center; /* Centralizar o texto do footer */
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 30px; /* Adicionei um padding para separar o conteúdo do footer das bordas */
-}
-
-.footer-column {
-    width: 25%;
-    text-align: left; /* Alinhar o texto à esquerda */
-    padding: 0 20px; /* Adicionei um padding para espaçamento interno */
-}
-
-.footer-column h1 {
-    font-weight: bold;
-    font-size: 25px;
-    margin-bottom: 15px; /* Adicionei um margin-bottom para separar os títulos das listas */
-}
-
-.contact-info {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.contact-info li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px; /* Espaçamento entre os itens */
-}
-
-.contact-info li img {
-    margin-right: 10px;
-}
-
-.contact-info li span {
-    font-weight: normal; /* Removendo o negrito dos textos das informações de contato */
-}
-
-.footer-column ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.footer-column li {
-    margin-bottom: 10px;
-    font-size: 15px;
-    font-weight: normal; /* Removendo o negrito dos textos das listas */
-}
-
-.footer-column p {
-    margin: 0; /* Removi o margin-top para os parágrafos dentro das colunas */
-    font-family: 'Arial', Helvetica, sans-serif;
-}
-
-
-.footer-end p{
-    font-weight: normal; /* Removendo o negrito dos textos das listas */
-    background-color: #FFDF56;
-    text-align: center;
-    padding: 10px 0; 
-    color: black;
-    margin-top: 20px; /* Ajustei o margin-top para um valor maior */
-}
-
-@media (max-width: 768px) {
-
-    .linha-separacao {
-        margin-top: 60px;
+        margin-top: 10px;
     }
 
-    h1 {
-        margin-left: -10px;
-        margin-top: -30px;
+    .image-grid {
+        grid-template-columns: 1fr; /* Uma coluna em dispositivos móveis */
+        gap: 20px; /* Espaçamento entre as imagens */
     }
 
-    .footer-column {
-        width: 100%; /* Uma coluna por linha em telas pequenas */
-        text-align: left; /* Centralizar o texto em telas pequenas */
-        padding: 10px 0; /* Ajustar o padding para telas pequenas */
-    }
-
-    .contact-info li {
-        justify-content: center; /* Centralizar itens de contato em telas pequenas */
-    }
-
-    .image-item img {
+    .image-item foto {
+        width: 70% !important; /* Ajusta a largura da imagem */
+        height: auto !important; /* Mantém a proporção da imagem */
         margin-top: 20%;
-        width: 70% !important;
-        height: auto !important;
     }
 
     .image-item a {
-        font-size: 30%;
+        font-size: 60%;
         margin-top: -50% !important;
     }
 
-    .linkedin-img {
-        height: 20px; /* Ajuste a altura conforme necessário */
-        width: 20px; /* Ajuste a largura conforme necessário */
-        border-radius: 3px;
-        margin-top: 80px; /* Ajuste as margens conforme necessário */
-        margin-left: 10px; /* Ajuste as margens conforme necessário */
-        margin-bottom: 10px; /* Ajuste as margens conforme necessário */
-    }
-    .div p{
-        color:#000000;
+    .linkedin {
+        height: 20px !important; /* Ajusta a altura conforme necessário */
+        width: 20px !important; /* Ajusta a largura conforme necessário */
+        margin-left: 3px !important; /* Ajuste as margens conforme necessário */
     }
 
+    .cargo {
+        font-size: 100%;
+        margin-left: 8%;
+    }
 }
