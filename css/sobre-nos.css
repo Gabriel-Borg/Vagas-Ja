@@ -203,6 +203,14 @@ div p {
   gap: 1rem;
 }
 
+.linkedin img{
+    height: 30px;
+    width: 30px;
+    border-radius: 3px; 
+    margin-top: 10px; 
+    margin-left: 20px; 
+    margin-bottom: 20px;
+}
 
 .yellow-line {
     width: 750px;
@@ -440,11 +448,11 @@ div p {
 
 @media (max-width: 768px) {
 
-    .linha-separacao{
+    .linha-separacao {
         margin-top: 60px;
     }
 
-    h1{
+    h1 {
         margin-left: -10px;
         margin-top: -30px;
     }
@@ -458,4 +466,28 @@ div p {
     .contact-info li {
         justify-content: center; /* Centralizar itens de contato em telas pequenas */
     }
+
+    .image-item img {
+        margin-top: 20%;
+        width: 70% !important;
+        height: auto !important;
+    }
+
+    .image-item a {
+        font-size: 30%;
+        margin-top: -50% !important;
+    }
+
+    .linkedin-img {
+        height: 20px; /* Ajuste a altura conforme necessário */
+        width: 20px; /* Ajuste a largura conforme necessário */
+        border-radius: 3px;
+        margin-top: 80px; /* Ajuste as margens conforme necessário */
+        margin-left: 10px; /* Ajuste as margens conforme necessário */
+        margin-bottom: 10px; /* Ajuste as margens conforme necessário */
+    }
+    .div p{
+        color:#000000;
+    }
+
 }
