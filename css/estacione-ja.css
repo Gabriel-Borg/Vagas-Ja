@@ -103,14 +103,19 @@ img {
     font-weight: bold; /* Negrito */
     text-transform: uppercase; /* Transformar texto em maiúsculas */
     letter-spacing: 1px; /* Espaçamento entre caracteres */
-    cursor: pointer; /* Cursor de ponteiro ao passar por cima */
-    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s; /* Transição suave */
 }
 
-/* Estilos para hover */
+
 .search:hover {
-    background-color: #ffd51c; /* Amarelo mais escuro ao passar por cima */
-    color: #fff; /* Texto branco ao passar por cima */
+    background-color: #FFC107; /* Amarelo mais escuro no hover */
+    transform: scale(1.05); /* Leve aumento no hover */
+}
+
+#search:active {
+    background-color: #FFB300; /* Amarelo ainda mais escuro no clique */
+    transform: scale(0.95); /* Leve diminuição no clique */
 }
 
 #location-input {
