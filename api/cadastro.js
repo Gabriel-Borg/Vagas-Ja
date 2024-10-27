@@ -8,22 +8,28 @@ document.querySelector('form').addEventListener('submit', async (event) => {
     const senha = document.getElementById('senha').value;
 
     try {
-        const response = await fetch('https://vagas-ja.vercel.app/cadastro', {
+        const response = await fetch('/api/cadastro', { // Use a rota da API
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ nome, rg, email, celular, senha }),
         });
-    
+
+        // Verifique se a resposta é OK (status 200)
+        if (!response.ok) {
+            throw new Error(`Erro: ${response.status} ${response.statusText}`);
+        }
+
         const text = await response.text(); // Obtenha a resposta como texto
-        console.log(await response.text()); // Adicione esta linha para verificar a resposta do servidor
         console.log(text); // Log da resposta para depuração
-        const data = JSON.parse(text); // Tente analisar como JSON
-    
+        
+        // Tente analisar a resposta como JSON
+        const data = JSON.parse(text);
+        
         alert(data.message);
     } catch (error) {
         console.error('Erro ao cadastrar:', error);
+        alert('Erro ao cadastrar. Tente novamente mais tarde.');
     }
-    
 });
