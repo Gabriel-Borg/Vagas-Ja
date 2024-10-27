@@ -14,11 +14,16 @@ document.querySelector('form').addEventListener('submit', async (event) => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ nome, rg, email, celular, senha }),
-        });        
-
-        const data = await response.json();
+        });
+    
+        const text = await response.text(); // Obtenha a resposta como texto
+        console.log(await response.text()); // Adicione esta linha para verificar a resposta do servidor
+        console.log(text); // Log da resposta para depuração
+        const data = JSON.parse(text); // Tente analisar como JSON
+    
         alert(data.message);
     } catch (error) {
         console.error('Erro ao cadastrar:', error);
     }
+    
 });

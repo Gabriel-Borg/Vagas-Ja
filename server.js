@@ -1,65 +1,45 @@
 const express = require('express');
-const mysql = require('mysql');
-const bcrypt = require('bcrypt'); // Adicione isso para o bcrypt
+const { Pool } = require('pg');
 const app = express();
 const port = 3000;
 
 // Configuração da conexão com o banco de dados
-const db = mysql.createConnection({
+const pool = new Pool({
   host: 'prudishly-hospitable-buzzard.data-1.use1.tembo.io',
   user: 'postgres',
   password: '535UuhtcCjQWu8gj',
-  database: 'postgres'
-});
-
-// Conectar ao banco de dados
-db.connect((err) => {
-  if (err) {
-    throw err;
-  }
-  console.log('Conectado ao banco de dados MySQL');
-});
-
-// Middleware para interpretar JSON no corpo das requisições
-app.use(express.json()); // Adicione isso
-
-// Rota para cadastro de novos clientes
-app.post('/cadastro', (req, res) => {
-    const { nome, rg, email, celular, senha } = req.body;
-
-    // Criptografar a senha
-    bcrypt.hash(senha, 10, (err, hashedPassword) => {
-        if (err) {
-            return res.status(500).json({ error: 'Erro ao criar conta.' });
-        }
-
-        // Inserir o cliente no banco de dados
-        let sql = 'INSERT INTO Cliente (nome, rg, email, celular, senha) VALUES (?, ?, ?, ?, ?)';
-        db.query(sql, [nome, rg, email, celular, hashedPassword], (err, results) => {
-            if (err) {
-                return res.status(500).json({ error: 'Erro ao inserir dados.' });
-            }
-            res.status(201).json({ message: 'Cliente cadastrado com sucesso!' });
-        });
-    });
-});
-
-// Rota para login (exemplo)
-app.post('/login', (req, res) => {
-    // Lógica de login
+  database: 'postgres',
+  port: 5432 // A porta padrão do PostgreSQL
 });
 
 // Rota para obter dados do banco de dados
-app.get('/dados', (req, res) => {
-    let sql = 'SELECT * FROM sua_tabela';
-    db.query(sql, (err, results) => {
-        if (err) {
-            throw err;
-        }
-        res.json(results);
-    });
+app.get('/dados', async (req, res) => {
+  try {
+    const result = await pool.query('SELECT * FROM sua_tabela');
+    res.json(result.rows);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Erro ao acessar o banco de dados');
+  }
+});
+
+// Rota para cadastrar usuário
+app.post('/cadastro', async (req, res) => {
+  const { nome, rg, email, celular, senha } = req.body;
+
+  // Aqui você deve adicionar o código para criptografar a senha
+  // e realizar a inserção no banco de dados
+
+  try {
+    const query = 'INSERT INTO Cliente (nome, rg, email, celular, senha) VALUES ($1, $2, $3, $4, $5)';
+    await pool.query(query, [nome, rg, email, celular, senha]);
+    res.status(201).json({ message: 'Usuário cadastrado com sucesso' });
+  } catch (error) {
+    console.error('Erro ao cadastrar:', error);
+    res.status(500).json({ message: 'Erro ao cadastrar' });
+  }
 });
 
 app.listen(port, () => {
-    console.log(`Servidor rodando na porta ${port}`);
+  console.log(`Servidor rodando na porta ${port}`);
 });
