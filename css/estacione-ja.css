@@ -85,38 +85,14 @@ img {
 }
 
 .search-container {
-    position: absolute;
+    /* position: absolute; */
     top: 20px;
     left: 20px;
     display: flex;
     align-items: center;
-    width: 200px!important;   
+    width: 500px!important;   
 }
 
-.search {
-    background-color: #FFDF56; /* Amarelo */
-    color: #000; /* Preto */
-    border: none;
-    border-radius: 25px; /* Bordas arredondadas */
-    padding: 12px 24px; /* Espaçamento interno */
-    font-size: 16px; /* Tamanho da fonte */
-    font-weight: bold; /* Negrito */
-    text-transform: uppercase; /* Transformar texto em maiúsculas */
-    letter-spacing: 1px; /* Espaçamento entre caracteres */
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s; /* Transição suave */
-}
-
-
-.search:hover {
-    background-color: #FFC107; /* Amarelo mais escuro no hover */
-    transform: scale(1.05); /* Leve aumento no hover */
-}
-
-#search:active {
-    background-color: #FFB300; /* Amarelo ainda mais escuro no clique */
-    transform: scale(0.95); /* Leve diminuição no clique */
-}
 
 #location-input {
     width: 300px;
@@ -237,44 +213,105 @@ h1{
 } 
 
 #estacionamentos-proximos {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(26, 26, 26, 0.8); /* Fundo transparente */
     padding: 20px;
-    background-color: #1A1A1A;
-}
-
-#estacionamentos-proximos h2 {
-    color: #FFDF56;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .lista-estacionamentos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    display: flex;
+    justify-content: center;
     gap: 20px;
+    overflow-x: auto; /* Permitir scroll horizontal se necessário */
+    padding: 10px;
 }
 
 .lista-estacionamentos-item {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; /* Alinhar conteúdo à esquerda */
     background-color: #ffffff;
     padding: 15px;
-    border: 1px solid #ffffff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    width: 250px; /* Definir um tamanho fixo */
+    position: relative; /* Para o botão de favorito */
 }
 
+.lista-estacionamentos-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.lista-estacionamentos-item h3 {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.lista-estacionamentos-item p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.vagas-disponiveis {
+    color: #333;
+    font-weight: bold;
+}
+
+.preco-hora {
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
 
 .selecionar-btn {
-    display: block; /* Tornar o botão um elemento de bloco */
-    margin: 0 auto; /* Centralizar horizontalmente */
-    background-color: black; /* Cor de fundo preta */
-    color: #FFDF56; 
-    border: none; /* Remover borda */
-    border-radius: 5px; /* Bordas arredondadas */
-    padding: 10px 70px; /* Espaçamento interno */
-    cursor: pointer; /* Cursor ao passar sobre o botão */
-    margin-top: 10px; /* Espaçamento acima do botão */
-    font-size: larger;
+    background-color: #FFDF56;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
 }
+
+.selecionar-btn:hover {
+    background-color: #333;
+    color: #FFDF56;
+}
+
+.lista-estacionamentos-item .favorito {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    color: #FFDF56;
+    cursor: pointer;
+}
+
+.tag-reservado {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #FFDF56;
+    color: black;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+ 
 
 @media  (max-width:755px) {
 

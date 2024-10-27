@@ -16,15 +16,14 @@
 <body>
     <header>
         <nav class ="navigation">
-            <div class="search-container">
-                <input id="location-input" type="text" placeholder="Digite o ponto de busca...">
+            <div style="z-index:2;position: absolute;top:80px;" class="search-container">
+                <input  style="width: 100%;"  id="location-input" type="text" placeholder="Pesquise o local ou endereço desejado">
+             <img id="location-input-icon"  style="cursor:pointer;z-index:1; position: absolute;right:25px; top:32px; transform: translateY(-50%); width: 25px;" src="./Icon/Search.svg" alt="">
             </div>
 
             <a href="index.html">
             <img src="image/logo_vagas.png" alt="Logo"/>
             </a>
-
-            <div><button id="search" class="search">Buscar</button></div>
 
             <ul class="nav-menu">
                 <li class="nav-item"><a href="estacioneJa.html">Estacione Já</a></li>
@@ -47,12 +46,10 @@
 
 <section id="estacionamentos-proximos">
     <div class="lista-estacionamentos">
-        <!-- Aqui serão adicionados os estacionamentos via JavaScript -->
     </div>
     <div class="yellow-line"></div>
 </section>
 
-<!-- PARTE FINAL PADRÃO -->
 <footer class="footer">
     <div class="footer-container">
         <div class="footer-column">

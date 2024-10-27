@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/mobile-index.css">
     <link rel="stylesheet" href="css/rodape.css">
 
-    <title>Vagas Já</title>
+    <title>Vagas sá</title>
 </head>
 <body>
     <header>
@@ -53,14 +53,17 @@
                                 <button type="button" class="btn" onclick="selectButton(this)">Agora</button>
                                 <button type="button" class="btn" onclick="selectButton(this)">Reserva</button>
                                 <button type="button" class="btn" onclick="selectButton(this)">Mensal</button>
-                                <button type="button" class="btn" onclick="selectButton(this)">Anual</button>
                             </div>
                         </section>
                     </div>
                     <div class="search-box">
                         <form action="estacioneJa.html" method="get" id="search-form">
-                            <input type="text" placeholder="Pesquise o local ou endereço desejado" name="search" id="search-input" required>
-                            <button type="submit" class="search-btn">Buscar</button>
+                            <div style="position: relative; width: 100%; ">
+                                <input  type="text" placeholder="Pesquise o local ou endereço desejado" name="search" id="search-input" required>
+                                
+                                <img id="location-input-icon" style="position: absolute; right:10px; top:40%; transform: translateY(-50%); width: 25px;" src="./Icon/Search.svg" alt="">
+                            </div>
+                            <button id="index-search-button" type="submit" class="search-btn">Buscar</button>
                         </form>                        
                     </div>
                 </div>
@@ -154,15 +157,27 @@
 
         </div>
     </div>
+    <div id="map"></div>
 
     <div class="footer-end">
         <p>Todos direitos reservados para VagasJá 2024.</p>
     </div>
+
 </footer>
 
+<!-- AJUSTAR PARA ESCONDER A CHAVE -->
+<script>
+    // Defina manualmente o objeto window.process com as variáveis de ambiente desejadas
+    window.process = {
+      env: {
+        API_KEY: 'AIzaSyAq89_1Oj4_zEVhPUtrWVq7kKoQjNJelkI' 
+      }
+    };
+  </script>
 
 <script src="js/menu.js" ></script>
 <script src="js/carousel.js" ></script>
+<script src="js/script.js"></script>
 
 </body>
 </html>
