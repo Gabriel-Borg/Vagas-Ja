@@ -4,12 +4,13 @@ const app = express();
 const port = 3000;
 
 // Configuração da conexão com o banco de dados
+const { Pool } = require('pg');
+
 const pool = new Pool({
-  host: 'prudishly-hospitable-buzzard.data-1.use1.tembo.io',
-  user: 'postgres',
-  password: '535UuhtcCjQWu8gj',
-  database: 'vagasja.tembo',
-  port: 5432 // A porta padrão do PostgreSQL
+  connectionString: process.env.DATABASE, // Usa a variável de ambiente para a conexão
+  ssl: {
+    rejectUnauthorized: false, // Necessário se o banco exigir SSL, como muitos provedores de nuvem
+  },
 });
 
 // Rota para obter dados do banco de dados
