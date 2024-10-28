@@ -15,7 +15,7 @@ const pool = new Pool({
 // Rota para obter dados do banco de dados
 app.get('/dados', async (req, res) => {
   try {
-    const result = await pool.query('SELECT * FROM sua_tabela');
+    const result = await pool.query('SELECT * FROM Cliente');
     res.json(result.rows);
   } catch (err) {
     console.error(err);
