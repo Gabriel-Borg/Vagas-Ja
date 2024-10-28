@@ -1,3 +1,13 @@
+// api/cadastro.js
+export default function handler(req, res) {
+    if (req.method === 'POST') {
+        // Lógica para lidar com o cadastro
+        res.status(200).json({ message: 'Cadastro realizado com sucesso!' });
+    } else {
+        res.setHeader('Allow', ['POST']);
+        res.status(405).end(`Method ${req.method} Not Allowed`);
+    }
+}
 document.querySelector('form').addEventListener('submit', async (event) => {
     event.preventDefault();
 
@@ -32,4 +42,5 @@ document.querySelector('form').addEventListener('submit', async (event) => {
         console.error('Erro ao cadastrar:', error);
         alert('Erro ao cadastrar. Tente novamente mais tarde.');
     }
+
 });
