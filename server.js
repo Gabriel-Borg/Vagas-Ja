@@ -8,7 +8,7 @@ const pool = new Pool({
   host: 'prudishly-hospitable-buzzard.data-1.use1.tembo.io',
   user: 'postgres',
   password: '535UuhtcCjQWu8gj',
-  database: 'postgres',
+  database: 'vagasja.tembo',
   port: 5432 // A porta padrão do PostgreSQL
 });
 
