@@ -1,10 +1,14 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "@vercel/postgres": "^0.10.0",
     "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "mysql": "^2.18.1",
     "pg": "^8.13.1"
+=======
+    "dotenv": "^16.4.5"
+>>>>>>> parent of 3f35478 (banco de dados)
   }
 }

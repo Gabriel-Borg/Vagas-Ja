@@ -32,31 +32,31 @@
         </nav>
     </header>
 
+<div class="main-content">
     <div class="form-container">
         <h1>Cadastro</h1>
-        <form id="cadastroForm">
+        <form>
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
-
-            <label for="rg">RG:</label>
-            <input type="text" id="rg" name="rg" required>
-
+            
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-
-            <label for="celular">Celular:</label>
-            <input type="text" id="celular" name="celular" required>
-
+            
             <label for="senha">Senha:</label>
             <input type="password" id="senha" name="senha" required>
-
-            <button type="submit">Cadastrar</button>
-        </form>
-        <p>Já tem uma conta? <a href="login.html">Faça login</a></p>
+                      
+          </form>
+          <button  onclick="grava()" >Cadastrar</button>
+        <p>Já tem uma conta? <a href="login.html">Login</a></p>
     </div>
+</div>
 
+<script src="js/firebaseconfig.js"></script>
 <script src="js/menu.js"></script>
+<<<<<<< HEAD
 <script src="src/cadastro.js"></script>
 
+=======
+>>>>>>> parent of 3f35478 (banco de dados)
 </body>
 </html>
