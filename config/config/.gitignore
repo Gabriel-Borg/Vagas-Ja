@@ -1,0 +1,2 @@
+# Ignore arquivos de configuração que contenham chaves de API
+.env
