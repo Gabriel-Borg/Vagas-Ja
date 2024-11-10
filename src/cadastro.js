@@ -18,7 +18,7 @@ document.querySelector('form').addEventListener('submit', async (event) => {
     const senha = document.getElementById('senha').value;
 
     try {
-        const response = await fetch('/api/cadastro', { // Use a rota da API
+        const response = await fetch('/cadastro', { // Use a rota da API
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
